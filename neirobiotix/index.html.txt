@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Нейробиотикс — натуральные усилители когнитивных функций</title>
+    <title>ГЌГҐГ©Г°Г®ГЎГЁГ®ГІГЁГЄГ± вЂ” Г­Г ГІГіГ°Г Г«ГјГ­Г»ГҐ ГіГ±ГЁГ«ГЁГІГҐГ«ГЁ ГЄГ®ГЈГ­ГЁГІГЁГўГ­Г»Гµ ГґГіГ­ГЄГ¶ГЁГ©</title>
     <style>
         * {
             margin: 0;
@@ -24,7 +24,7 @@
             padding: 0 20px;
         }
 
-        /* Навигация */
+        /* ГЌГ ГўГЁГЈГ Г¶ГЁГї */
         .navbar {
             padding: 20px 0;
             border-bottom: 1px solid #eaeaea;
@@ -86,7 +86,7 @@
             background: #0f3821;
         }
 
-        /* Герой секция */
+        /* ГѓГҐГ°Г®Г© Г±ГҐГЄГ¶ГЁГї */
         .hero {
             padding: 80px 0;
             background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
@@ -153,7 +153,7 @@
             box-shadow: 0 20px 40px rgba(0,0,0,0.1);
         }
 
-        /* Преимущества */
+        /* ГЏГ°ГҐГЁГ¬ГіГ№ГҐГ±ГІГўГ  */
         .benefits {
             padding: 60px 0;
             background: white;
@@ -189,7 +189,7 @@
             color: #666;
         }
 
-        /* Продукты */
+        /* ГЏГ°Г®Г¤ГіГЄГІГ» */
         .products {
             padding: 80px 0;
             background: #f8f9fa;
@@ -278,7 +278,7 @@
             transition: background 0.3s;
         }
 
-        /* Производство */
+        /* ГЏГ°Г®ГЁГ§ГўГ®Г¤Г±ГІГўГ® */
         .production {
             padding: 80px 0;
             background: white;
@@ -315,7 +315,7 @@
             left: 0;
         }
 
-        /* Кейсы */
+        /* ГЉГҐГ©Г±Г» */
         .testimonials {
             padding: 80px 0;
             background: #f8f9fa;
@@ -352,7 +352,7 @@
             font-size: 14px;
         }
 
-        /* Шаги */
+        /* ГГ ГЈГЁ */
         .steps {
             padding: 80px 0;
             background: white;
@@ -384,7 +384,7 @@
             margin: 0 auto 20px;
         }
 
-        /* Научная база */
+        /* ГЌГ ГіГ·Г­Г Гї ГЎГ Г§Г  */
         .science {
             padding: 80px 0;
             background: #f8f9fa;
@@ -424,7 +424,7 @@
             font-size: 14px;
         }
 
-        /* Футер */
+        /* Г”ГіГІГҐГ° */
         .footer {
             background: #1a1a1a;
             color: white;
@@ -489,7 +489,7 @@
             font-size: 14px;
         }
 
-        /* Адаптивность */
+        /* ГЂГ¤Г ГЇГІГЁГўГ­Г®Г±ГІГј */
         @media (max-width: 768px) {
             .nav-menu {
                 display: none;
@@ -521,7 +521,7 @@
             }
         }
 
-        /* Временные заглушки для изображений */
+        /* Г‚Г°ГҐГ¬ГҐГ­Г­Г»ГҐ Г§Г ГЈГ«ГіГёГЄГЁ Г¤Г«Гї ГЁГ§Г®ГЎГ°Г Г¦ГҐГ­ГЁГ© */
         .image-placeholder {
             background: linear-gradient(135deg, #1a4d2e 0%, #0f3821 100%);
             color: white;
@@ -533,208 +533,208 @@
     </style>
 </head>
 <body>
-    <!-- Навигация -->
+    <!-- ГЌГ ГўГЁГЈГ Г¶ГЁГї -->
     <nav class="navbar">
         <div class="container nav-container">
             <div class="logo">
-                Нейробиотикс
-                <span>натуральные усилители когнитивных функций</span>
+                ГЌГҐГ©Г°Г®ГЎГЁГ®ГІГЁГЄГ±
+                <span>Г­Г ГІГіГ°Г Г«ГјГ­Г»ГҐ ГіГ±ГЁГ«ГЁГІГҐГ«ГЁ ГЄГ®ГЈГ­ГЁГІГЁГўГ­Г»Гµ ГґГіГ­ГЄГ¶ГЁГ©</span>
             </div>
             <ul class="nav-menu">
-                <li><a href="#products">Продукты</a></li>
-                <li><a href="#science">Наука</a></li>
-                <li><a href="#production">Производство</a></li>
-                <li><a href="#contacts">Контакты</a></li>
+                <li><a href="#products">ГЏГ°Г®Г¤ГіГЄГІГ»</a></li>
+                <li><a href="#science">ГЌГ ГіГЄГ </a></li>
+                <li><a href="#production">ГЏГ°Г®ГЁГ§ГўГ®Г¤Г±ГІГўГ®</a></li>
+                <li><a href="#contacts">ГЉГ®Г­ГІГ ГЄГІГ»</a></li>
             </ul>
-            <button class="cart-btn">Корзина</button>
+            <button class="cart-btn">ГЉГ®Г°Г§ГЁГ­Г </button>
         </div>
     </nav>
 
-    <!-- Герой секция -->
+    <!-- ГѓГҐГ°Г®Г© Г±ГҐГЄГ¶ГЁГї -->
     <section class="hero">
         <div class="container hero-container">
             <div>
-                <h1 class="hero-title">Прокачайте свой мозг без химии</h1>
-                <p class="hero-subtitle">Грибные адаптогены для памяти, фокуса и энергии. 100% натурально, выращено в России.</p>
+                <h1 class="hero-title">ГЏГ°Г®ГЄГ Г·Г Г©ГІГҐ Г±ГўГ®Г© Г¬Г®Г§ГЈ ГЎГҐГ§ ГµГЁГ¬ГЁГЁ</h1>
+                <p class="hero-subtitle">ГѓГ°ГЁГЎГ­Г»ГҐ Г Г¤Г ГЇГІГ®ГЈГҐГ­Г» Г¤Г«Гї ГЇГ Г¬ГїГІГЁ, ГґГ®ГЄГіГ±Г  ГЁ ГЅГ­ГҐГ°ГЈГЁГЁ. 100% Г­Г ГІГіГ°Г Г«ГјГ­Г®, ГўГ»Г°Г Г№ГҐГ­Г® Гў ГђГ®Г±Г±ГЁГЁ.</p>
                 <div class="hero-buttons">
-                    <button class="btn-primary">Выбрать продукт</button>
-                    <button class="btn-secondary">Узнать больше</button>
+                    <button class="btn-primary">Г‚Г»ГЎГ°Г ГІГј ГЇГ°Г®Г¤ГіГЄГІ</button>
+                    <button class="btn-secondary">Г“Г§Г­Г ГІГј ГЎГ®Г«ГјГёГҐ</button>
                 </div>
             </div>
             <div>
-                <img src="/api/placeholder/600/400" alt="Ежовик гребенчатый" class="hero-image image-placeholder">
+                <img src="/api/placeholder/600/400" alt="Г…Г¦Г®ГўГЁГЄ ГЈГ°ГҐГЎГҐГ­Г·Г ГІГ»Г©" class="hero-image image-placeholder">
             </div>
         </div>
     </section>
 
-    <!-- Преимущества -->
+    <!-- ГЏГ°ГҐГЁГ¬ГіГ№ГҐГ±ГІГўГ  -->
     <section class="benefits">
         <div class="container">
-            <h2 class="section-title">Природа знает, как помочь мозгу</h2>
-            <p class="section-subtitle">Тысячелетия эволюции, создавшие молекулы для вашей продуктивности</p>
+            <h2 class="section-title">ГЏГ°ГЁГ°Г®Г¤Г  Г§Г­Г ГҐГІ, ГЄГ ГЄ ГЇГ®Г¬Г®Г·Гј Г¬Г®Г§ГЈГі</h2>
+            <p class="section-subtitle">Г’Г»Г±ГїГ·ГҐГ«ГҐГІГЁГї ГЅГўГ®Г«ГѕГ¶ГЁГЁ, Г±Г®Г§Г¤Г ГўГёГЁГҐ Г¬Г®Г«ГҐГЄГіГ«Г» Г¤Г«Гї ГўГ ГёГҐГ© ГЇГ°Г®Г¤ГіГЄГІГЁГўГ­Г®Г±ГІГЁ</p>
             <div class="benefits-grid">
                 <div class="benefit-card">
                     <div class="benefit-icon">??</div>
-                    <h3 class="benefit-title">100% натурально</h3>
-                    <p class="benefit-text">Без ГМО, без пестицидов, без химии</p>
+                    <h3 class="benefit-title">100% Г­Г ГІГіГ°Г Г«ГјГ­Г®</h3>
+                    <p class="benefit-text">ГЃГҐГ§ ГѓГЊГЋ, ГЎГҐГ§ ГЇГҐГ±ГІГЁГ¶ГЁГ¤Г®Гў, ГЎГҐГ§ ГµГЁГ¬ГЁГЁ</p>
                 </div>
                 <div class="benefit-card">
                     <div class="benefit-icon">??</div>
-                    <h3 class="benefit-title">Подтверждено наукой</h3>
-                    <p class="benefit-text">Исследования в PubMed и собственные разработки</p>
+                    <h3 class="benefit-title">ГЏГ®Г¤ГІГўГҐГ°Г¦Г¤ГҐГ­Г® Г­Г ГіГЄГ®Г©</h3>
+                    <p class="benefit-text">Г€Г±Г±Г«ГҐГ¤Г®ГўГ Г­ГЁГї Гў PubMed ГЁ Г±Г®ГЎГ±ГІГўГҐГ­Г­Г»ГҐ Г°Г Г§Г°Г ГЎГ®ГІГЄГЁ</p>
                 </div>
                 <div class="benefit-card">
                     <div class="benefit-icon">????</div>
-                    <h3 class="benefit-title">Сделано в России</h3>
-                    <p class="benefit-text">Собственная ферма, полный цикл производства</p>
+                    <h3 class="benefit-title">Г‘Г¤ГҐГ«Г Г­Г® Гў ГђГ®Г±Г±ГЁГЁ</h3>
+                    <p class="benefit-text">Г‘Г®ГЎГ±ГІГўГҐГ­Г­Г Гї ГґГҐГ°Г¬Г , ГЇГ®Г«Г­Г»Г© Г¶ГЁГЄГ« ГЇГ°Г®ГЁГ§ГўГ®Г¤Г±ГІГўГ </p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Продукты -->
+    <!-- ГЏГ°Г®Г¤ГіГЄГІГ» -->
     <section id="products" class="products">
         <div class="container">
-            <h2 class="section-title">Наши продукты</h2>
-            <p class="section-subtitle">Выберите то, что нужно именно вашему мозгу</p>
+            <h2 class="section-title">ГЌГ ГёГЁ ГЇГ°Г®Г¤ГіГЄГІГ»</h2>
+            <p class="section-subtitle">Г‚Г»ГЎГҐГ°ГЁГІГҐ ГІГ®, Г·ГІГ® Г­ГіГ¦Г­Г® ГЁГ¬ГҐГ­Г­Г® ГўГ ГёГҐГ¬Гі Г¬Г®Г§ГЈГі</p>
             <div class="products-grid">
-                <!-- Ежовик -->
+                <!-- Г…Г¦Г®ГўГЁГЄ -->
                 <div class="product-card">
-                    <div class="product-image image-placeholder">Ежовик гребенчатый</div>
+                    <div class="product-image image-placeholder">Г…Г¦Г®ГўГЁГЄ ГЈГ°ГҐГЎГҐГ­Г·Г ГІГ»Г©</div>
                     <div class="product-info">
-                        <h3 class="product-title">Ежовик гребенчатый</h3>
+                        <h3 class="product-title">Г…Г¦Г®ГўГЁГЄ ГЈГ°ГҐГЎГҐГ­Г·Г ГІГ»Г©</h3>
                         <div class="product-subtitle">Lion's Mane</div>
-                        <p class="product-description">Для ясности ума, памяти и против "тумана" в голове. Стимулирует синтез фактора роста нервов.</p>
+                        <p class="product-description">Г„Г«Гї ГїГ±Г­Г®Г±ГІГЁ ГіГ¬Г , ГЇГ Г¬ГїГІГЁ ГЁ ГЇГ°Г®ГІГЁГў "ГІГіГ¬Г Г­Г " Гў ГЈГ®Г«Г®ГўГҐ. Г‘ГІГЁГ¬ГіГ«ГЁГ°ГіГҐГІ Г±ГЁГ­ГІГҐГ§ ГґГ ГЄГІГ®Г°Г  Г°Г®Г±ГІГ  Г­ГҐГ°ГўГ®Гў.</p>
                         <div class="product-price">1 990 ?</div>
-                        <button class="product-btn">В корзину</button>
+                        <button class="product-btn">Г‚ ГЄГ®Г°Г§ГЁГ­Гі</button>
                     </div>
                 </div>
-                <!-- Кордицепс -->
+                <!-- ГЉГ®Г°Г¤ГЁГ¶ГҐГЇГ± -->
                 <div class="product-card">
-                    <div class="product-image image-placeholder">Кордицепс</div>
+                    <div class="product-image image-placeholder">ГЉГ®Г°Г¤ГЁГ¶ГҐГЇГ±</div>
                     <div class="product-info">
-                        <h3 class="product-title">Кордицепс</h3>
+                        <h3 class="product-title">ГЉГ®Г°Г¤ГЁГ¶ГҐГЇГ±</h3>
                         <div class="product-subtitle">Cordyceps militaris</div>
-                        <p class="product-description">Для энергии и выносливости. Природный адаптоген, повышающий физическую и умственную работоспособность.</p>
+                        <p class="product-description">Г„Г«Гї ГЅГ­ГҐГ°ГЈГЁГЁ ГЁ ГўГ»Г­Г®Г±Г«ГЁГўГ®Г±ГІГЁ. ГЏГ°ГЁГ°Г®Г¤Г­Г»Г© Г Г¤Г ГЇГІГ®ГЈГҐГ­, ГЇГ®ГўГ»ГёГ ГѕГ№ГЁГ© ГґГЁГ§ГЁГ·ГҐГ±ГЄГіГѕ ГЁ ГіГ¬Г±ГІГўГҐГ­Г­ГіГѕ Г°Г ГЎГ®ГІГ®Г±ГЇГ®Г±Г®ГЎГ­Г®Г±ГІГј.</p>
                         <div class="product-price">2 190 ?</div>
-                        <button class="product-btn">В корзину</button>
+                        <button class="product-btn">Г‚ ГЄГ®Г°Г§ГЁГ­Гі</button>
                     </div>
                 </div>
-                <!-- Рейши -->
+                <!-- ГђГҐГ©ГёГЁ -->
                 <div class="product-card">
-                    <div class="product-image image-placeholder">Рейши</div>
+                    <div class="product-image image-placeholder">ГђГҐГ©ГёГЁ</div>
                     <div class="product-info">
-                        <h3 class="product-title">Рейши</h3>
+                        <h3 class="product-title">ГђГҐГ©ГёГЁ</h3>
                         <div class="product-subtitle">Ganoderma lucidum</div>
-                        <p class="product-description">Для спокойствия и качественного сна. Снижает тревожность, помогает восстановлению нервной системы.</p>
+                        <p class="product-description">Г„Г«Гї Г±ГЇГ®ГЄГ®Г©Г±ГІГўГЁГї ГЁ ГЄГ Г·ГҐГ±ГІГўГҐГ­Г­Г®ГЈГ® Г±Г­Г . Г‘Г­ГЁГ¦Г ГҐГІ ГІГ°ГҐГўГ®Г¦Г­Г®Г±ГІГј, ГЇГ®Г¬Г®ГЈГ ГҐГІ ГўГ®Г±Г±ГІГ Г­Г®ГўГ«ГҐГ­ГЁГѕ Г­ГҐГ°ГўГ­Г®Г© Г±ГЁГ±ГІГҐГ¬Г».</p>
                         <div class="product-price">2 090 ?</div>
-                        <button class="product-btn">В корзину</button>
+                        <button class="product-btn">Г‚ ГЄГ®Г°Г§ГЁГ­Гі</button>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Производство -->
+    <!-- ГЏГ°Г®ГЁГ§ГўГ®Г¤Г±ГІГўГ® -->
     <section id="production" class="production">
         <div class="container production-grid">
             <div>
-                <img src="/api/placeholder/600/400" alt="Лаборатория" class="production-image image-placeholder">
+                <img src="/api/placeholder/600/400" alt="Г‹Г ГЎГ®Г°Г ГІГ®Г°ГЁГї" class="production-image image-placeholder">
             </div>
             <div>
-                <h2 class="section-title" style="text-align: left;">От науки к результату</h2>
-                <p style="margin-bottom: 20px;">Мы не перепродаем. Мы выращиваем сами — от грибной культуры в чашке Петри до готовой капсулы в ваших руках.</p>
+                <h2 class="section-title" style="text-align: left;">ГЋГІ Г­Г ГіГЄГЁ ГЄ Г°ГҐГ§ГіГ«ГјГІГ ГІГі</h2>
+                <p style="margin-bottom: 20px;">ГЊГ» Г­ГҐ ГЇГҐГ°ГҐГЇГ°Г®Г¤Г ГҐГ¬. ГЊГ» ГўГ»Г°Г Г№ГЁГўГ ГҐГ¬ Г±Г Г¬ГЁ вЂ” Г®ГІ ГЈГ°ГЁГЎГ­Г®Г© ГЄГіГ«ГјГІГіГ°Г» Гў Г·Г ГёГЄГҐ ГЏГҐГІГ°ГЁ Г¤Г® ГЈГ®ГІГ®ГўГ®Г© ГЄГ ГЇГ±ГіГ«Г» Гў ГўГ ГёГЁГµ Г°ГіГЄГ Гµ.</p>
                 <ul class="production-list">
-                    <li>?? Лабораторный контроль каждой партии</li>
-                    <li>?? Экстракция, сохраняющая активные вещества</li>
-                    <li>?? Полные декларации и сертификаты</li>
-                    <li>?? Без ГМО, без пестицидов</li>
+                    <li>?? Г‹Г ГЎГ®Г°Г ГІГ®Г°Г­Г»Г© ГЄГ®Г­ГІГ°Г®Г«Гј ГЄГ Г¦Г¤Г®Г© ГЇГ Г°ГІГЁГЁ</li>
+                    <li>?? ГќГЄГ±ГІГ°Г ГЄГ¶ГЁГї, Г±Г®ГµГ°Г Г­ГїГѕГ№Г Гї Г ГЄГІГЁГўГ­Г»ГҐ ГўГҐГ№ГҐГ±ГІГўГ </li>
+                    <li>?? ГЏГ®Г«Г­Г»ГҐ Г¤ГҐГЄГ«Г Г°Г Г¶ГЁГЁ ГЁ Г±ГҐГ°ГІГЁГґГЁГЄГ ГІГ»</li>
+                    <li>?? ГЃГҐГ§ ГѓГЊГЋ, ГЎГҐГ§ ГЇГҐГ±ГІГЁГ¶ГЁГ¤Г®Гў</li>
                 </ul>
             </div>
         </div>
     </section>
 
-    <!-- Кейсы -->
+    <!-- ГЉГҐГ©Г±Г» -->
     <section class="testimonials">
         <div class="container">
-            <h2 class="section-title">Реальные истории без прикрас</h2>
+            <h2 class="section-title">ГђГҐГ Г«ГјГ­Г»ГҐ ГЁГ±ГІГ®Г°ГЁГЁ ГЎГҐГ§ ГЇГ°ГЁГЄГ°Г Г±</h2>
             <div class="testimonials-grid">
                 <div class="testimonial-card">
-                    <p class="testimonial-text">«После 2 недель приема ежовика перестала зависать над задачами. Мысли стали четче, как будто туман рассеялся».</p>
-                    <div class="testimonial-author">Анна, 34 года</div>
-                    <div class="testimonial-role">IT-менеджер</div>
+                    <p class="testimonial-text">В«ГЏГ®Г±Г«ГҐ 2 Г­ГҐГ¤ГҐГ«Гј ГЇГ°ГЁГҐГ¬Г  ГҐГ¦Г®ГўГЁГЄГ  ГЇГҐГ°ГҐГ±ГІГ Г«Г  Г§Г ГўГЁГ±Г ГІГј Г­Г Г¤ Г§Г Г¤Г Г·Г Г¬ГЁ. ГЊГ»Г±Г«ГЁ Г±ГІГ Г«ГЁ Г·ГҐГІГ·ГҐ, ГЄГ ГЄ ГЎГіГ¤ГІГ® ГІГіГ¬Г Г­ Г°Г Г±Г±ГҐГїГ«Г±ГїВ».</p>
+                    <div class="testimonial-author">ГЂГ­Г­Г , 34 ГЈГ®Г¤Г </div>
+                    <div class="testimonial-role">IT-Г¬ГҐГ­ГҐГ¤Г¦ГҐГ°</div>
                 </div>
                 <div class="testimonial-card">
-                    <p class="testimonial-text">«Кордицепс реально дает энергии. Тренировки не валюсь, и голова ясная даже после работы».</p>
-                    <div class="testimonial-author">Михаил, 28 лет</div>
-                    <div class="testimonial-role">Спортсмен</div>
+                    <p class="testimonial-text">В«ГЉГ®Г°Г¤ГЁГ¶ГҐГЇГ± Г°ГҐГ Г«ГјГ­Г® Г¤Г ГҐГІ ГЅГ­ГҐГ°ГЈГЁГЁ. Г’Г°ГҐГ­ГЁГ°Г®ГўГЄГЁ Г­ГҐ ГўГ Г«ГѕГ±Гј, ГЁ ГЈГ®Г«Г®ГўГ  ГїГ±Г­Г Гї Г¤Г Г¦ГҐ ГЇГ®Г±Г«ГҐ Г°Г ГЎГ®ГІГ»В».</p>
+                    <div class="testimonial-author">ГЊГЁГµГ ГЁГ«, 28 Г«ГҐГІ</div>
+                    <div class="testimonial-role">Г‘ГЇГ®Г°ГІГ±Г¬ГҐГ­</div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Как начать -->
+    <!-- ГЉГ ГЄ Г­Г Г·Г ГІГј -->
     <section class="steps">
         <div class="container">
-            <h2 class="section-title">Начните заботиться о мозге сегодня</h2>
+            <h2 class="section-title">ГЌГ Г·Г­ГЁГІГҐ Г§Г ГЎГ®ГІГЁГІГјГ±Гї Г® Г¬Г®Г§ГЈГҐ Г±ГҐГЈГ®Г¤Г­Гї</h2>
             <div class="steps-grid">
                 <div class="step-card">
                     <div class="step-number">1</div>
-                    <h3 style="margin-bottom: 10px;">Выберите продукт</h3>
-                    <p style="color: #666;">Ежовик, кордицепс, рейши или комплекс</p>
+                    <h3 style="margin-bottom: 10px;">Г‚Г»ГЎГҐГ°ГЁГІГҐ ГЇГ°Г®Г¤ГіГЄГІ</h3>
+                    <p style="color: #666;">Г…Г¦Г®ГўГЁГЄ, ГЄГ®Г°Г¤ГЁГ¶ГҐГЇГ±, Г°ГҐГ©ГёГЁ ГЁГ«ГЁ ГЄГ®Г¬ГЇГ«ГҐГЄГ±</p>
                 </div>
                 <div class="step-card">
                     <div class="step-number">2</div>
-                    <h3 style="margin-bottom: 10px;">Оформите заказ</h3>
-                    <p style="color: #666;">Доставка по всей России</p>
+                    <h3 style="margin-bottom: 10px;">ГЋГґГ®Г°Г¬ГЁГІГҐ Г§Г ГЄГ Г§</h3>
+                    <p style="color: #666;">Г„Г®Г±ГІГ ГўГЄГ  ГЇГ® ГўГ±ГҐГ© ГђГ®Г±Г±ГЁГЁ</p>
                 </div>
                 <div class="step-card">
                     <div class="step-number">3</div>
-                    <h3 style="margin-bottom: 10px;">Почувствуйте разницу</h3>
-                    <p style="color: #666;">Через 2-3 недели регулярного приема</p>
+                    <h3 style="margin-bottom: 10px;">ГЏГ®Г·ГіГўГ±ГІГўГіГ©ГІГҐ Г°Г Г§Г­ГЁГ¶Гі</h3>
+                    <p style="color: #666;">Г—ГҐГ°ГҐГ§ 2-3 Г­ГҐГ¤ГҐГ«ГЁ Г°ГҐГЈГіГ«ГїГ°Г­Г®ГЈГ® ГЇГ°ГЁГҐГ¬Г </p>
                 </div>
             </div>
             <div style="text-align: center; margin-top: 40px;">
-                <button class="btn-primary">Подобрать продукт</button>
+                <button class="btn-primary">ГЏГ®Г¤Г®ГЎГ°Г ГІГј ГЇГ°Г®Г¤ГіГЄГІ</button>
             </div>
         </div>
     </section>
 
-    <!-- Научная база -->
+    <!-- ГЌГ ГіГ·Г­Г Гї ГЎГ Г§Г  -->
     <section id="science" class="science">
         <div class="container">
-            <h2 class="section-title">Опираемся на исследования</h2>
-            <p class="section-subtitle">Активные вещества грибов изучаются по всему миру</p>
+            <h2 class="section-title">ГЋГЇГЁГ°Г ГҐГ¬Г±Гї Г­Г  ГЁГ±Г±Г«ГҐГ¤Г®ГўГ Г­ГЁГї</h2>
+            <p class="section-subtitle">ГЂГЄГІГЁГўГ­Г»ГҐ ГўГҐГ№ГҐГ±ГІГўГ  ГЈГ°ГЁГЎГ®Гў ГЁГ§ГіГ·Г ГѕГІГ±Гї ГЇГ® ГўГ±ГҐГ¬Гі Г¬ГЁГ°Гі</p>
             <div class="science-grid">
                 <div class="science-card">
-                    <h3 class="science-title">Hericium erinaceus и когнитивные функции</h3>
+                    <h3 class="science-title">Hericium erinaceus ГЁ ГЄГ®ГЈГ­ГЁГІГЁГўГ­Г»ГҐ ГґГіГ­ГЄГ¶ГЁГЁ</h3>
                     <div class="science-meta">PubMed, 2023</div>
-                    <a href="#" class="science-link">Читать исследование ?</a>
+                    <a href="#" class="science-link">Г—ГЁГІГ ГІГј ГЁГ±Г±Г«ГҐГ¤Г®ГўГ Г­ГЁГҐ ?</a>
                 </div>
                 <div class="science-card">
-                    <h3 class="science-title">Cordyceps militaris и выносливость</h3>
-                    <div class="science-meta">Мета-анализ, 2022</div>
-                    <a href="#" class="science-link">Читать исследование ?</a>
+                    <h3 class="science-title">Cordyceps militaris ГЁ ГўГ»Г­Г®Г±Г«ГЁГўГ®Г±ГІГј</h3>
+                    <div class="science-meta">ГЊГҐГІГ -Г Г­Г Г«ГЁГ§, 2022</div>
+                    <a href="#" class="science-link">Г—ГЁГІГ ГІГј ГЁГ±Г±Г«ГҐГ¤Г®ГўГ Г­ГЁГҐ ?</a>
                 </div>
                 <div class="science-card">
-                    <h3 class="science-title">Ganoderma lucidum и нервная система</h3>
-                    <div class="science-meta">Обзор, 2024</div>
-                    <a href="#" class="science-link">Читать исследование ?</a>
+                    <h3 class="science-title">Ganoderma lucidum ГЁ Г­ГҐГ°ГўГ­Г Гї Г±ГЁГ±ГІГҐГ¬Г </h3>
+                    <div class="science-meta">ГЋГЎГ§Г®Г°, 2024</div>
+                    <a href="#" class="science-link">Г—ГЁГІГ ГІГј ГЁГ±Г±Г«ГҐГ¤Г®ГўГ Г­ГЁГҐ ?</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Футер -->
+    <!-- Г”ГіГІГҐГ° -->
     <footer id="contacts" class="footer">
         <div class="container">
             <div class="footer-grid">
                 <div>
                     <div class="footer-logo">
-                        Нейробиотикс
-                        <span>натуральные усилители когнитивных функций</span>
+                        ГЌГҐГ©Г°Г®ГЎГЁГ®ГІГЁГЄГ±
+                        <span>Г­Г ГІГіГ°Г Г«ГјГ­Г»ГҐ ГіГ±ГЁГ«ГЁГІГҐГ«ГЁ ГЄГ®ГЈГ­ГЁГІГЁГўГ­Г»Гµ ГґГіГ­ГЄГ¶ГЁГ©</span>
                     </div>
-                    <p style="color: #999; margin-bottom: 20px;">Собственное производство. Полный цикл. Гарантия качества.</p>
+                    <p style="color: #999; margin-bottom: 20px;">Г‘Г®ГЎГ±ГІГўГҐГ­Г­Г®ГҐ ГЇГ°Г®ГЁГ§ГўГ®Г¤Г±ГІГўГ®. ГЏГ®Г«Г­Г»Г© Г¶ГЁГЄГ«. ГѓГ Г°Г Г­ГІГЁГї ГЄГ Г·ГҐГ±ГІГўГ .</p>
                     <div class="social-links">
                         <a href="#">??</a>
                         <a href="#">??</a>
@@ -742,37 +742,38 @@
                     </div>
                 </div>
                 <div>
-                    <h4 style="margin-bottom: 20px;">Каталог</h4>
+                    <h4 style="margin-bottom: 20px;">ГЉГ ГІГ Г«Г®ГЈ</h4>
                     <ul class="footer-links">
-                        <li><a href="#">Ежовик гребенчатый</a></li>
-                        <li><a href="#">Кордицепс</a></li>
-                        <li><a href="#">Рейши</a></li>
-                        <li><a href="#">Комплексы</a></li>
+                        <li><a href="#">Г…Г¦Г®ГўГЁГЄ ГЈГ°ГҐГЎГҐГ­Г·Г ГІГ»Г©</a></li>
+                        <li><a href="#">ГЉГ®Г°Г¤ГЁГ¶ГҐГЇГ±</a></li>
+                        <li><a href="#">ГђГҐГ©ГёГЁ</a></li>
+                        <li><a href="#">ГЉГ®Г¬ГЇГ«ГҐГЄГ±Г»</a></li>
                     </ul>
                 </div>
                 <div>
-                    <h4 style="margin-bottom: 20px;">Информация</h4>
+                    <h4 style="margin-bottom: 20px;">Г€Г­ГґГ®Г°Г¬Г Г¶ГЁГї</h4>
                     <ul class="footer-links">
-                        <li><a href="#">О производстве</a></li>
-                        <li><a href="#">Доставка и оплата</a></li>
-                        <li><a href="#">Сертификаты</a></li>
-                        <li><a href="#">Статьи</a></li>
+                        <li><a href="#">ГЋ ГЇГ°Г®ГЁГ§ГўГ®Г¤Г±ГІГўГҐ</a></li>
+                        <li><a href="#">Г„Г®Г±ГІГ ГўГЄГ  ГЁ Г®ГЇГ«Г ГІГ </a></li>
+                        <li><a href="#">Г‘ГҐГ°ГІГЁГґГЁГЄГ ГІГ»</a></li>
+                        <li><a href="#">Г‘ГІГ ГІГјГЁ</a></li>
                     </ul>
                 </div>
                 <div>
-                    <h4 style="margin-bottom: 20px;">Контакты</h4>
+                    <h4 style="margin-bottom: 20px;">ГЉГ®Г­ГІГ ГЄГІГ»</h4>
                     <ul class="footer-links">
                         <li>?? +7 (999) 123-45-67</li>
                         <li>?? info@neirobiotix.ru</li>
-                        <li>?? Москва, ул. Грибная, 1</li>
+                        <li>?? ГЊГ®Г±ГЄГўГ , ГіГ«. ГѓГ°ГЁГЎГ­Г Гї, 1</li>
                     </ul>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>© 2025 Нейробиотикс. Все права защищены.</p>
-                <p style="margin-top: 10px; font-size: 12px;">*Информация на сайте не является медицинской консультацией. Перед применением проконсультируйтесь со специалистом.</p>
+                <p>В© 2025 ГЌГҐГ©Г°Г®ГЎГЁГ®ГІГЁГЄГ±. Г‚Г±ГҐ ГЇГ°Г ГўГ  Г§Г Г№ГЁГ№ГҐГ­Г».</p>
+                <p style="margin-top: 10px; font-size: 12px;">*Г€Г­ГґГ®Г°Г¬Г Г¶ГЁГї Г­Г  Г±Г Г©ГІГҐ Г­ГҐ ГїГўГ«ГїГҐГІГ±Гї Г¬ГҐГ¤ГЁГ¶ГЁГ­Г±ГЄГ®Г© ГЄГ®Г­Г±ГіГ«ГјГІГ Г¶ГЁГҐГ©. ГЏГҐГ°ГҐГ¤ ГЇГ°ГЁГ¬ГҐГ­ГҐГ­ГЁГҐГ¬ ГЇГ°Г®ГЄГ®Г­Г±ГіГ«ГјГІГЁГ°ГіГ©ГІГҐГ±Гј Г±Г® Г±ГЇГҐГ¶ГЁГ Г«ГЁГ±ГІГ®Г¬.</p>
             </div>
         </div>
     </footer>
 </body>
+
 </html>
