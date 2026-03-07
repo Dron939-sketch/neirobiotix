@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Нейробиотикс — натуральные усилители когнитивных функций</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -15,8 +15,8 @@
         body {
             font-family: 'Montserrat', sans-serif;
             line-height: 1.6;
-            color: #fff;
-            background: #14171A;
+            color: #1e2a3a;
+            background: #ffffff;
             overflow-x: hidden;
         }
 
@@ -29,8 +29,8 @@
         /* Навигация */
         .navbar {
             padding: 20px 0;
-            background: rgba(20,23,26,0.95);
-            border-bottom: 1px solid rgba(255,255,255,0.1);
+            background: rgba(255,255,255,0.98);
+            border-bottom: 1px solid rgba(0,0,0,0.05);
             position: sticky;
             top: 0;
             z-index: 100;
@@ -46,14 +46,14 @@
         .logo {
             font-size: 28px;
             font-weight: 800;
-            color: #00A8E8;
+            color: #29c7c6;
             letter-spacing: -0.5px;
         }
 
         .logo span {
             font-size: 14px;
             font-weight: 400;
-            color: #8A9BA8;
+            color: #6b7a8a;
             display: block;
         }
 
@@ -65,7 +65,7 @@
 
         .nav-menu a {
             text-decoration: none;
-            color: #fff;
+            color: #1e2a3a;
             font-weight: 500;
             font-size: 16px;
             transition: color 0.3s;
@@ -73,7 +73,7 @@
         }
 
         .nav-menu a:hover {
-            color: #00A8E8;
+            color: #29c7c6;
         }
 
         .nav-menu a:after {
@@ -83,7 +83,7 @@
             left: 0;
             width: 0;
             height: 2px;
-            background: #00A8E8;
+            background: #29c7c6;
             transition: width 0.3s;
         }
 
@@ -92,7 +92,7 @@
         }
 
         .cart-btn {
-            background: linear-gradient(135deg, #00A8E8, #0080B0);
+            background: linear-gradient(135deg, #29c7c6, #1e9a9a);
             color: white;
             border: none;
             padding: 12px 30px;
@@ -101,18 +101,18 @@
             font-weight: 600;
             font-size: 15px;
             transition: transform 0.3s, box-shadow 0.3s;
-            box-shadow: 0 4px 15px rgba(0,168,232,0.3);
+            box-shadow: 0 4px 15px rgba(41, 199, 198, 0.3);
         }
 
         .cart-btn:hover {
             transform: translateY(-2px);
-            box-shadow: 0 8px 25px rgba(0,168,232,0.4);
+            box-shadow: 0 8px 25px rgba(41, 199, 198, 0.4);
         }
 
         /* Герой секция с видео-фоном */
         .hero {
             position: relative;
-            min-height: 90vh;
+            min-height: 80vh;
             display: flex;
             align-items: center;
             overflow: hidden;
@@ -134,7 +134,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(0,0,0,0.6);
+            background: rgba(0,0,0,0.4);
             z-index: 1;
         }
 
@@ -156,15 +156,11 @@
         }
 
         .hero-title {
-            font-size: 64px;
+            font-size: 58px;
             font-weight: 800;
             line-height: 1.2;
             margin-bottom: 20px;
             color: white;
-        }
-
-        .hero-title span {
-            color: #00A8E8;
         }
 
         .hero-subtitle {
@@ -190,13 +186,13 @@
         }
 
         .btn-primary {
-            background: #00A8E8;
+            background: #29c7c6;
             color: white;
         }
 
         .btn-primary:hover {
             transform: translateY(-2px);
-            box-shadow: 0 10px 30px rgba(0,168,232,0.4);
+            box-shadow: 0 10px 30px rgba(41, 199, 198, 0.4);
         }
 
         .btn-secondary {
@@ -207,13 +203,13 @@
 
         .btn-secondary:hover {
             background: white;
-            color: #14171A;
+            color: #1e2a3a;
         }
 
         /* Преимущества */
         .benefits {
             padding: 80px 0;
-            background: #14171A;
+            background: #f8faff;
         }
 
         .section-title {
@@ -221,12 +217,12 @@
             font-weight: 700;
             text-align: center;
             margin-bottom: 20px;
-            color: white;
+            color: #1e2a3a;
         }
 
         .section-subtitle {
             text-align: center;
-            color: #8A9BA8;
+            color: #6b7a8a;
             margin-bottom: 60px;
             font-size: 18px;
             max-width: 700px;
@@ -241,47 +237,46 @@
         }
 
         .benefit-card {
-            background: #1E2328;
+            background: white;
             padding: 40px 30px;
             border-radius: 20px;
             text-align: center;
-            border: 1px solid rgba(255,255,255,0.1);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
             transition: transform 0.3s;
         }
 
         .benefit-card:hover {
             transform: translateY(-10px);
-            border-color: #00A8E8;
         }
 
         .benefit-icon {
             width: 80px;
             height: 80px;
             margin: 0 auto 25px;
-            background: rgba(0,168,232,0.1);
+            background: linear-gradient(135deg, #29c7c620, #1e9a9a20);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
             font-size: 36px;
-            color: #00A8E8;
+            color: #29c7c6;
         }
 
         .benefit-title {
             font-size: 22px;
             font-weight: 600;
             margin-bottom: 15px;
-            color: white;
+            color: #1e2a3a;
         }
 
         .benefit-text {
-            color: #8A9BA8;
+            color: #6b7a8a;
         }
 
         /* Продукты */
         .products {
             padding: 80px 0;
-            background: #1E2328;
+            background: white;
         }
 
         .products-grid {
@@ -291,17 +286,17 @@
         }
 
         .product-card {
-            background: #14171A;
+            background: white;
             border-radius: 20px;
             overflow: hidden;
-            border: 1px solid rgba(255,255,255,0.1);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
             transition: all 0.3s;
+            border: 1px solid rgba(0,0,0,0.05);
         }
 
         .product-card:hover {
             transform: translateY(-15px);
-            border-color: #00A8E8;
-            box-shadow: 0 20px 40px rgba(0,168,232,0.2);
+            box-shadow: 0 30px 45px rgba(41, 199, 198, 0.15);
         }
 
         .product-image {
@@ -318,18 +313,18 @@
             font-size: 22px;
             font-weight: 600;
             margin-bottom: 5px;
-            color: white;
+            color: #1e2a3a;
         }
 
         .product-subtitle {
-            color: #00A8E8;
+            color: #29c7c6;
             font-weight: 500;
             margin-bottom: 15px;
             font-size: 14px;
         }
 
         .product-description {
-            color: #8A9BA8;
+            color: #6b7a8a;
             margin-bottom: 20px;
             font-size: 14px;
         }
@@ -337,13 +332,13 @@
         .product-price {
             font-size: 24px;
             font-weight: 700;
-            color: #00A8E8;
+            color: #1e2a3a;
             margin-bottom: 20px;
         }
 
         .product-btn {
             width: 100%;
-            background: linear-gradient(135deg, #00A8E8, #0080B0);
+            background: linear-gradient(135deg, #29c7c6, #1e9a9a);
             color: white;
             border: none;
             padding: 12px;
@@ -357,10 +352,10 @@
             opacity: 0.9;
         }
 
-        /* О производстве */
+        /* О производстве (без партнеров) */
         .about {
             padding: 80px 0;
-            background: #14171A;
+            background: #f8faff;
         }
 
         .about-container {
@@ -374,17 +369,17 @@
             font-size: 42px;
             font-weight: 700;
             margin-bottom: 30px;
-            color: white;
+            color: #1e2a3a;
         }
 
         .about-title span {
-            color: #00A8E8;
+            color: #29c7c6;
         }
 
         .about-text {
-            color: #8A9BA8;
+            color: #1e2a3a;
             margin-bottom: 30px;
-            font-size: 16px;
+            font-size: 18px;
             line-height: 1.8;
         }
 
@@ -396,12 +391,12 @@
             margin-bottom: 15px;
             padding-left: 30px;
             position: relative;
-            color: white;
+            color: #1e2a3a;
         }
 
         .about-list li:before {
             content: "✓";
-            color: #00A8E8;
+            color: #29c7c6;
             font-weight: bold;
             position: absolute;
             left: 0;
@@ -411,13 +406,13 @@
         .about-image {
             width: 100%;
             border-radius: 20px;
-            border: 1px solid rgba(255,255,255,0.1);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
         }
 
         /* Кейсы */
         .testimonials {
             padding: 80px 0;
-            background: #1E2328;
+            background: white;
         }
 
         .testimonials-grid {
@@ -427,34 +422,32 @@
         }
 
         .testimonial-card {
-            background: #14171A;
+            background: #f8faff;
             padding: 40px;
             border-radius: 20px;
-            border: 1px solid rgba(255,255,255,0.1);
         }
 
         .testimonial-text {
             font-size: 16px;
             font-style: italic;
             margin-bottom: 20px;
-            color: white;
-            line-height: 1.8;
+            color: #1e2a3a;
         }
 
         .testimonial-author {
             font-weight: 600;
-            color: #00A8E8;
+            color: #29c7c6;
         }
 
         .testimonial-role {
-            color: #8A9BA8;
+            color: #6b7a8a;
             font-size: 14px;
         }
 
-        /* Как начать */
+        /* Как начать (просто для покупателя) */
         .steps {
             padding: 80px 0;
-            background: #14171A;
+            background: #f8faff;
         }
 
         .steps-grid {
@@ -466,15 +459,15 @@
         .step-card {
             text-align: center;
             padding: 40px 30px;
-            background: #1E2328;
+            background: white;
             border-radius: 20px;
-            border: 1px solid rgba(255,255,255,0.1);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
         }
 
         .step-number {
             width: 70px;
             height: 70px;
-            background: #00A8E8;
+            background: #29c7c6;
             color: white;
             border-radius: 50%;
             display: flex;
@@ -489,17 +482,17 @@
             font-size: 24px;
             font-weight: 600;
             margin-bottom: 15px;
-            color: white;
+            color: #1e2a3a;
         }
 
         .step-desc {
-            color: #8A9BA8;
+            color: #6b7a8a;
         }
 
         /* Научная база */
         .science {
             padding: 80px 0;
-            background: #1E2328;
+            background: white;
         }
 
         .science-grid {
@@ -509,27 +502,26 @@
         }
 
         .science-card {
-            background: #14171A;
+            background: #f8faff;
             padding: 30px;
             border-radius: 20px;
-            border: 1px solid rgba(255,255,255,0.1);
         }
 
         .science-title {
             font-size: 18px;
             font-weight: 600;
             margin-bottom: 10px;
-            color: white;
+            color: #1e2a3a;
         }
 
         .science-meta {
-            color: #8A9BA8;
+            color: #6b7a8a;
             font-size: 14px;
             margin-bottom: 15px;
         }
 
         .science-link {
-            color: #00A8E8;
+            color: #29c7c6;
             text-decoration: none;
             font-weight: 500;
             font-size: 14px;
@@ -538,7 +530,8 @@
         /* Форма */
         .form-section {
             padding: 80px 0;
-            background: linear-gradient(135deg, #00A8E8, #0080B0);
+            background: linear-gradient(135deg, #29c7c6, #1e9a9a);
+            color: white;
         }
 
         .form-container {
@@ -556,7 +549,7 @@
 
         .form-subtitle {
             margin-bottom: 40px;
-            color: rgba(255,255,255,0.9);
+            opacity: 0.9;
             font-size: 18px;
         }
 
@@ -576,7 +569,7 @@
         .form-btn {
             width: 100%;
             padding: 15px;
-            background: #14171A;
+            background: #1e2a3a;
             color: white;
             border: none;
             border-radius: 10px;
@@ -593,7 +586,7 @@
 
         /* Футер */
         .footer {
-            background: #0A0C0E;
+            background: #1e2a3a;
             color: white;
             padding: 60px 0 30px;
         }
@@ -608,13 +601,13 @@
         .footer-logo {
             font-size: 28px;
             font-weight: 700;
-            color: #00A8E8;
+            color: #29c7c6;
             margin-bottom: 20px;
         }
 
         .footer-logo span {
             font-size: 14px;
-            color: #8A9BA8;
+            color: rgba(255,255,255,0.6);
             display: block;
         }
 
@@ -627,13 +620,13 @@
         }
 
         .footer-links a {
-            color: #8A9BA8;
+            color: rgba(255,255,255,0.6);
             text-decoration: none;
             transition: color 0.3s;
         }
 
         .footer-links a:hover {
-            color: #00A8E8;
+            color: #29c7c6;
         }
 
         .social-links {
@@ -643,7 +636,7 @@
         }
 
         .social-links a {
-            color: #8A9BA8;
+            color: rgba(255,255,255,0.6);
             text-decoration: none;
             font-size: 20px;
         }
@@ -652,7 +645,7 @@
             text-align: center;
             padding-top: 30px;
             border-top: 1px solid rgba(255,255,255,0.1);
-            color: #8A9BA8;
+            color: rgba(255,255,255,0.4);
             font-size: 14px;
         }
 
@@ -711,12 +704,13 @@
     <section class="hero">
         <video class="hero-video" autoplay muted loop playsinline>
             <source src="https://files.catbox.moe/5i8bkm.mp4" type="video/mp4">
+            Ваш браузер не поддерживает видео.
         </video>
         <div class="hero-overlay"></div>
         <div class="hero-content">
             <div class="container hero-container">
                 <div class="hero-text">
-                    <h1 class="hero-title">Прокачайте свой <span>мозг</span><br>без химии</h1>
+                    <h1 class="hero-title">Прокачайте свой мозг<br>без химии</h1>
                     <p class="hero-subtitle">Грибные адаптогены для памяти, фокуса и энергии. 100% натурально, напрямую от производителя.</p>
                     <div class="hero-buttons">
                         <button class="btn-primary">Выбрать продукт</button>
@@ -736,7 +730,7 @@
                 <div class="benefit-card">
                     <div class="benefit-icon">🌿</div>
                     <h3 class="benefit-title">100% натурально</h3>
-                    <p class="benefit-text">Без ГМО, без пестицидов, без химии. Только чистая сила природы в каждом продукте.</p>
+                    <p class="benefit-text">Без ГМО, без пестицидов, без химии. Только чистая сила природы.</p>
                 </div>
                 <div class="benefit-card">
                     <div class="benefit-icon">🔬</div>
@@ -746,13 +740,13 @@
                 <div class="benefit-card">
                     <div class="benefit-icon">🇷🇺</div>
                     <h3 class="benefit-title">Своя ферма</h3>
-                    <p class="benefit-text">Собственное производство в Санкт-Петербурге. Полный цикл выращивания и переработки.</p>
+                    <p class="benefit-text">Собственное производство в Санкт-Петербурге. Полный цикл выращивания.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Продукты (с вашими фото) -->
+    <!-- Продукты -->
     <section id="products" class="products">
         <div class="container">
             <h2 class="section-title">Наши продукты</h2>
@@ -811,13 +805,12 @@
         <div class="container about-container">
             <div>
                 <h2 class="about-title">Мы — <span>производитель</span></h2>
-                <p class="about-text">Мы не перепродаём и не привлекаем посредников. Вся продукция выращивается на нашей собственной ферме в Санкт-Петербурге — от грибной культуры в чашке Петри до готовых капсул в ваших руках.</p>
+                <p class="about-text">Вся продукция выращивается на нашей собственной ферме в Санкт-Петербурге — от грибной культуры до готовых капсул. Мы продаём напрямую, без посредников.</p>
                 <ul class="about-list">
                     <li>Полный цикл производства на одной площадке</li>
                     <li>Лабораторный контроль каждой партии</li>
                     <li>Экстракция, сохраняющая все активные вещества</li>
-                    <li>Без ГМО, без пестицидов, без химии</li>
-                    <li>Продаём напрямую — без наценок посредников</li>
+                    <li>Продажа напрямую — без наценок</li>
                 </ul>
             </div>
             <div>
@@ -826,7 +819,7 @@
         </div>
     </section>
 
-    <!-- Как начать (просто для покупателя) -->
+    <!-- Как начать -->
     <section class="steps">
         <div class="container">
             <h2 class="section-title">Как получить продукт</h2>
@@ -835,17 +828,17 @@
                 <div class="step-card">
                     <div class="step-number">1</div>
                     <h3 class="step-title">Выберите продукт</h3>
-                    <p class="step-desc">Ежовик, кордицепс, рейши или траметес — то, что нужно именно вам</p>
+                    <p class="step-desc">Ежовик, кордицепс, рейши или траметес</p>
                 </div>
                 <div class="step-card">
                     <div class="step-number">2</div>
                     <h3 class="step-title">Оформите заказ</h3>
-                    <p class="step-desc">Просто добавьте в корзину и заполните данные для доставки</p>
+                    <p class="step-desc">Добавьте в корзину и заполните данные для доставки</p>
                 </div>
                 <div class="step-card">
                     <div class="step-number">3</div>
                     <h3 class="step-title">Получите и пользуйтесь</h3>
-                    <p class="step-desc">Доставка по всей России. Начинайте заботу о мозге уже через несколько дней</p>
+                    <p class="step-desc">Доставка по всей России. Начинайте заботу о мозге</p>
                 </div>
             </div>
         </div>
@@ -855,15 +848,14 @@
     <section class="testimonials">
         <div class="container">
             <h2 class="section-title">Реальные истории</h2>
-            <p class="section-subtitle">Что говорят наши покупатели</p>
             <div class="testimonials-grid">
                 <div class="testimonial-card">
-                    <p class="testimonial-text">«После 2 недель приема ежовика перестала зависать над задачами. Мысли стали четче, как будто туман рассеялся. Заказываю теперь регулярно».</p>
+                    <p class="testimonial-text">«После 2 недель приема ежовика перестала зависать над задачами. Мысли стали четче, как будто туман рассеялся».</p>
                     <div class="testimonial-author">Анна, 34 года</div>
                     <div class="testimonial-role">IT-менеджер</div>
                 </div>
                 <div class="testimonial-card">
-                    <p class="testimonial-text">«Кордицепс реально дает энергии. Тренировки не валюсь, и голова ясная даже после работы. И главное — никакой химии».</p>
+                    <p class="testimonial-text">«Кордицепс реально дает энергии. Тренировки не валюсь, и голова ясная даже после работы».</p>
                     <div class="testimonial-author">Михаил, 28 лет</div>
                     <div class="testimonial-role">Спортсмен</div>
                 </div>
@@ -875,7 +867,6 @@
     <section id="science" class="science">
         <div class="container">
             <h2 class="section-title">Опираемся на исследования</h2>
-            <p class="section-subtitle">Активные вещества грибов изучаются по всему миру</p>
             <div class="science-grid">
                 <div class="science-card">
                     <h3 class="science-title">Hericium erinaceus и когнитивные функции</h3>
@@ -900,7 +891,7 @@
     <section class="form-section">
         <div class="container form-container">
             <h2 class="form-title">Остались вопросы?</h2>
-            <p class="form-subtitle">Напишите нам, и мы поможем подобрать продукт под ваши задачи</p>
+            <p class="form-subtitle">Напишите нам, и мы поможем подобрать продукт</p>
             <form>
                 <div class="form-group">
                     <input type="text" class="form-input" placeholder="Ваше имя" required>
@@ -925,7 +916,7 @@
                         Нейробиотикс
                         <span>натуральные усилители когнитивных функций</span>
                     </div>
-                    <p style="color: #8A9BA8; margin-bottom: 20px;">Собственное производство в Санкт-Петербурге. Полный цикл. Продажа напрямую.</p>
+                    <p style="color: rgba(255,255,255,0.6); margin-bottom: 20px;">Собственное производство в Санкт-Петербурге. Продажа напрямую.</p>
                     <div class="social-links">
                         <a href="#">📘</a>
                         <a href="#">📷</a>
@@ -955,13 +946,13 @@
                     <ul class="footer-links">
                         <li>📞 +7 (999) 123-45-67</li>
                         <li>✉️ info@neirobiotix.ru</li>
-                        <li>📍 Санкт-Петербург, ул. Грибная, 1</li>
+                        <li>📍 Санкт-Петербург</li>
                     </ul>
                 </div>
             </div>
             <div class="footer-bottom">
                 <p>© 2025 Нейробиотикс. Все права защищены. Продажа напрямую от производителя.</p>
-                <p style="margin-top: 10px; font-size: 12px;">*Информация на сайте не является медицинской консультацией. Перед применением проконсультируйтесь со специалистом.</p>
+                <p style="margin-top: 10px; font-size: 12px;">*Информация на сайте не является медицинской консультацией.</p>
             </div>
         </div>
     </footer>
