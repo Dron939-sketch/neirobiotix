@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Нейробиотикс — натуральные усилители когнитивных функций</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -15,8 +15,8 @@
         body {
             font-family: 'Montserrat', sans-serif;
             line-height: 1.6;
-            color: #1e2a3a;
-            background: #ffffff;
+            color: #fff;
+            background: #14171A;
             overflow-x: hidden;
         }
 
@@ -29,8 +29,8 @@
         /* Навигация */
         .navbar {
             padding: 20px 0;
-            background: rgba(255,255,255,0.95);
-            border-bottom: 1px solid rgba(0,0,0,0.05);
+            background: rgba(20,23,26,0.95);
+            border-bottom: 1px solid rgba(255,255,255,0.1);
             position: sticky;
             top: 0;
             z-index: 100;
@@ -46,14 +46,14 @@
         .logo {
             font-size: 28px;
             font-weight: 800;
-            color: #2a7f9c;
+            color: #00A8E8;
             letter-spacing: -0.5px;
         }
 
         .logo span {
             font-size: 14px;
             font-weight: 400;
-            color: #6b7a8a;
+            color: #8A9BA8;
             display: block;
         }
 
@@ -65,7 +65,7 @@
 
         .nav-menu a {
             text-decoration: none;
-            color: #1e2a3a;
+            color: #fff;
             font-weight: 500;
             font-size: 16px;
             transition: color 0.3s;
@@ -73,7 +73,7 @@
         }
 
         .nav-menu a:hover {
-            color: #2a7f9c;
+            color: #00A8E8;
         }
 
         .nav-menu a:after {
@@ -83,7 +83,7 @@
             left: 0;
             width: 0;
             height: 2px;
-            background: #2a7f9c;
+            background: #00A8E8;
             transition: width 0.3s;
         }
 
@@ -92,7 +92,7 @@
         }
 
         .cart-btn {
-            background: linear-gradient(135deg, #2a7f9c, #1e5a7a);
+            background: linear-gradient(135deg, #00A8E8, #0080B0);
             color: white;
             border: none;
             padding: 12px 30px;
@@ -101,18 +101,18 @@
             font-weight: 600;
             font-size: 15px;
             transition: transform 0.3s, box-shadow 0.3s;
-            box-shadow: 0 4px 15px rgba(42, 127, 156, 0.3);
+            box-shadow: 0 4px 15px rgba(0,168,232,0.3);
         }
 
         .cart-btn:hover {
             transform: translateY(-2px);
-            box-shadow: 0 8px 25px rgba(42, 127, 156, 0.4);
+            box-shadow: 0 8px 25px rgba(0,168,232,0.4);
         }
 
         /* Герой секция с видео-фоном */
         .hero {
             position: relative;
-            min-height: 80vh;
+            min-height: 90vh;
             display: flex;
             align-items: center;
             overflow: hidden;
@@ -134,7 +134,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(0,0,0,0.4);
+            background: rgba(0,0,0,0.6);
             z-index: 1;
         }
 
@@ -156,11 +156,15 @@
         }
 
         .hero-title {
-            font-size: 58px;
+            font-size: 64px;
             font-weight: 800;
             line-height: 1.2;
             margin-bottom: 20px;
             color: white;
+        }
+
+        .hero-title span {
+            color: #00A8E8;
         }
 
         .hero-subtitle {
@@ -186,13 +190,13 @@
         }
 
         .btn-primary {
-            background: white;
-            color: #1e2a3a;
+            background: #00A8E8;
+            color: white;
         }
 
         .btn-primary:hover {
             transform: translateY(-2px);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            box-shadow: 0 10px 30px rgba(0,168,232,0.4);
         }
 
         .btn-secondary {
@@ -203,20 +207,13 @@
 
         .btn-secondary:hover {
             background: white;
-            color: #1e2a3a;
-        }
-
-        .hero-image {
-            width: 100%;
-            max-width: 500px;
-            border-radius: 20px;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+            color: #14171A;
         }
 
         /* Преимущества */
         .benefits {
             padding: 80px 0;
-            background: #f8faff;
+            background: #14171A;
         }
 
         .section-title {
@@ -224,12 +221,12 @@
             font-weight: 700;
             text-align: center;
             margin-bottom: 20px;
-            color: #1e2a3a;
+            color: white;
         }
 
         .section-subtitle {
             text-align: center;
-            color: #6b7a8a;
+            color: #8A9BA8;
             margin-bottom: 60px;
             font-size: 18px;
             max-width: 700px;
@@ -244,45 +241,47 @@
         }
 
         .benefit-card {
-            background: white;
+            background: #1E2328;
             padding: 40px 30px;
             border-radius: 20px;
             text-align: center;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            border: 1px solid rgba(255,255,255,0.1);
             transition: transform 0.3s;
         }
 
         .benefit-card:hover {
             transform: translateY(-10px);
+            border-color: #00A8E8;
         }
 
         .benefit-icon {
             width: 80px;
             height: 80px;
             margin: 0 auto 25px;
-            background: linear-gradient(135deg, #2a7f9c20, #1e5a7a20);
+            background: rgba(0,168,232,0.1);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
             font-size: 36px;
-            color: #2a7f9c;
+            color: #00A8E8;
         }
 
         .benefit-title {
             font-size: 22px;
             font-weight: 600;
             margin-bottom: 15px;
-            color: #1e2a3a;
+            color: white;
         }
 
         .benefit-text {
-            color: #6b7a8a;
+            color: #8A9BA8;
         }
 
         /* Продукты */
         .products {
             padding: 80px 0;
+            background: #1E2328;
         }
 
         .products-grid {
@@ -292,22 +291,22 @@
         }
 
         .product-card {
-            background: white;
+            background: #14171A;
             border-radius: 20px;
             overflow: hidden;
-            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+            border: 1px solid rgba(255,255,255,0.1);
             transition: all 0.3s;
-            border: 1px solid rgba(0,0,0,0.05);
         }
 
         .product-card:hover {
             transform: translateY(-15px);
-            box-shadow: 0 30px 45px rgba(42, 127, 156, 0.15);
+            border-color: #00A8E8;
+            box-shadow: 0 20px 40px rgba(0,168,232,0.2);
         }
 
         .product-image {
             width: 100%;
-            height: 300px;
+            height: 280px;
             object-fit: cover;
         }
 
@@ -319,18 +318,18 @@
             font-size: 22px;
             font-weight: 600;
             margin-bottom: 5px;
-            color: #1e2a3a;
+            color: white;
         }
 
         .product-subtitle {
-            color: #2a7f9c;
+            color: #00A8E8;
             font-weight: 500;
             margin-bottom: 15px;
             font-size: 14px;
         }
 
         .product-description {
-            color: #6b7a8a;
+            color: #8A9BA8;
             margin-bottom: 20px;
             font-size: 14px;
         }
@@ -338,13 +337,13 @@
         .product-price {
             font-size: 24px;
             font-weight: 700;
-            color: #1e2a3a;
+            color: #00A8E8;
             margin-bottom: 20px;
         }
 
         .product-btn {
             width: 100%;
-            background: linear-gradient(135deg, #2a7f9c, #1e5a7a);
+            background: linear-gradient(135deg, #00A8E8, #0080B0);
             color: white;
             border: none;
             padding: 12px;
@@ -358,141 +357,67 @@
             opacity: 0.9;
         }
 
-        /* Блок с текстом (как на mycofarm) */
-        .company-text {
+        /* О производстве */
+        .about {
             padding: 80px 0;
-            background: linear-gradient(135deg, #f8faff, #ffffff);
+            background: #14171A;
         }
 
-        .company-container {
+        .about-container {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 60px;
             align-items: center;
         }
 
-        .company-title {
-            font-size: 36px;
+        .about-title {
+            font-size: 42px;
             font-weight: 700;
             margin-bottom: 30px;
-            color: #1e2a3a;
-        }
-
-        .company-list {
-            list-style: none;
-            margin-top: 30px;
-        }
-
-        .company-list li {
-            margin-bottom: 20px;
-            padding-left: 35px;
-            position: relative;
-            font-size: 16px;
-        }
-
-        .company-list li:before {
-            content: "✓";
-            color: #2a7f9c;
-            font-weight: bold;
-            position: absolute;
-            left: 0;
-            font-size: 20px;
-        }
-
-        .company-image {
-            width: 100%;
-            border-radius: 20px;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
-        }
-
-        /* Этапы работы (как на mycofarm) */
-        .stages {
-            padding: 80px 0;
-            background: #1e2a3a;
             color: white;
         }
 
-        .stages-title {
-            font-size: 42px;
-            font-weight: 700;
-            text-align: center;
-            margin-bottom: 60px;
+        .about-title span {
+            color: #00A8E8;
         }
 
-        .stages-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 30px;
+        .about-text {
+            color: #8A9BA8;
+            margin-bottom: 30px;
+            font-size: 16px;
+            line-height: 1.8;
         }
 
-        .stage-card {
-            background: rgba(255,255,255,0.1);
-            padding: 40px 30px;
-            border-radius: 20px;
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255,255,255,0.2);
+        .about-list {
+            list-style: none;
         }
 
-        .stage-number {
-            font-size: 48px;
-            font-weight: 800;
-            color: #2a7f9c;
-            margin-bottom: 20px;
-            opacity: 0.8;
-        }
-
-        .stage-title {
-            font-size: 24px;
-            font-weight: 600;
+        .about-list li {
             margin-bottom: 15px;
+            padding-left: 30px;
+            position: relative;
+            color: white;
         }
 
-        .stage-desc {
-            color: rgba(255,255,255,0.8);
-            font-size: 15px;
-            line-height: 1.6;
-        }
-
-        /* Партнеры */
-        .partners {
-            padding: 80px 0;
-        }
-
-        .partners-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 30px;
-        }
-
-        .partner-card {
-            text-align: center;
-            padding: 30px;
-            background: #f8faff;
-            border-radius: 20px;
-        }
-
-        .partner-icon {
-            width: 60px;
-            height: 60px;
-            margin: 0 auto 20px;
-            background: white;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 24px;
-            color: #2a7f9c;
-        }
-
-        .partner-name {
-            font-weight: 600;
+        .about-list li:before {
+            content: "✓";
+            color: #00A8E8;
+            font-weight: bold;
+            position: absolute;
+            left: 0;
             font-size: 18px;
+        }
+
+        .about-image {
+            width: 100%;
+            border-radius: 20px;
+            border: 1px solid rgba(255,255,255,0.1);
         }
 
         /* Кейсы */
         .testimonials {
             padding: 80px 0;
-            background: #f8faff;
+            background: #1E2328;
         }
 
         .testimonials-grid {
@@ -502,32 +427,34 @@
         }
 
         .testimonial-card {
-            background: white;
+            background: #14171A;
             padding: 40px;
             border-radius: 20px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            border: 1px solid rgba(255,255,255,0.1);
         }
 
         .testimonial-text {
             font-size: 16px;
             font-style: italic;
             margin-bottom: 20px;
-            color: #1e2a3a;
+            color: white;
+            line-height: 1.8;
         }
 
         .testimonial-author {
             font-weight: 600;
-            color: #2a7f9c;
+            color: #00A8E8;
         }
 
         .testimonial-role {
-            color: #6b7a8a;
+            color: #8A9BA8;
             font-size: 14px;
         }
 
-        /* Шаги */
+        /* Как начать */
         .steps {
             padding: 80px 0;
+            background: #14171A;
         }
 
         .steps-grid {
@@ -538,27 +465,41 @@
 
         .step-card {
             text-align: center;
-            padding: 30px;
+            padding: 40px 30px;
+            background: #1E2328;
+            border-radius: 20px;
+            border: 1px solid rgba(255,255,255,0.1);
         }
 
         .step-number {
-            width: 60px;
-            height: 60px;
-            background: linear-gradient(135deg, #2a7f9c, #1e5a7a);
+            width: 70px;
+            height: 70px;
+            background: #00A8E8;
             color: white;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 28px;
+            font-size: 32px;
             font-weight: 700;
             margin: 0 auto 20px;
+        }
+
+        .step-title {
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 15px;
+            color: white;
+        }
+
+        .step-desc {
+            color: #8A9BA8;
         }
 
         /* Научная база */
         .science {
             padding: 80px 0;
-            background: #f8faff;
+            background: #1E2328;
         }
 
         .science-grid {
@@ -568,27 +509,27 @@
         }
 
         .science-card {
-            background: white;
+            background: #14171A;
             padding: 30px;
             border-radius: 20px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            border: 1px solid rgba(255,255,255,0.1);
         }
 
         .science-title {
             font-size: 18px;
             font-weight: 600;
             margin-bottom: 10px;
-            color: #1e2a3a;
+            color: white;
         }
 
         .science-meta {
-            color: #6b7a8a;
+            color: #8A9BA8;
             font-size: 14px;
             margin-bottom: 15px;
         }
 
         .science-link {
-            color: #2a7f9c;
+            color: #00A8E8;
             text-decoration: none;
             font-weight: 500;
             font-size: 14px;
@@ -597,8 +538,7 @@
         /* Форма */
         .form-section {
             padding: 80px 0;
-            background: linear-gradient(135deg, #2a7f9c, #1e5a7a);
-            color: white;
+            background: linear-gradient(135deg, #00A8E8, #0080B0);
         }
 
         .form-container {
@@ -608,14 +548,16 @@
         }
 
         .form-title {
-            font-size: 36px;
+            font-size: 42px;
             font-weight: 700;
             margin-bottom: 20px;
+            color: white;
         }
 
         .form-subtitle {
             margin-bottom: 40px;
-            opacity: 0.9;
+            color: rgba(255,255,255,0.9);
+            font-size: 18px;
         }
 
         .form-group {
@@ -628,14 +570,14 @@
             border: none;
             border-radius: 10px;
             font-size: 16px;
-            background: rgba(255,255,255,0.9);
+            background: white;
         }
 
         .form-btn {
             width: 100%;
             padding: 15px;
-            background: white;
-            color: #1e2a3a;
+            background: #14171A;
+            color: white;
             border: none;
             border-radius: 10px;
             font-size: 16px;
@@ -646,11 +588,12 @@
 
         .form-btn:hover {
             transform: translateY(-2px);
+            background: #000;
         }
 
         /* Футер */
         .footer {
-            background: #1e2a3a;
+            background: #0A0C0E;
             color: white;
             padding: 60px 0 30px;
         }
@@ -665,13 +608,13 @@
         .footer-logo {
             font-size: 28px;
             font-weight: 700;
-            color: white;
+            color: #00A8E8;
             margin-bottom: 20px;
         }
 
         .footer-logo span {
             font-size: 14px;
-            color: rgba(255,255,255,0.6);
+            color: #8A9BA8;
             display: block;
         }
 
@@ -684,13 +627,13 @@
         }
 
         .footer-links a {
-            color: rgba(255,255,255,0.6);
+            color: #8A9BA8;
             text-decoration: none;
             transition: color 0.3s;
         }
 
         .footer-links a:hover {
-            color: white;
+            color: #00A8E8;
         }
 
         .social-links {
@@ -700,7 +643,7 @@
         }
 
         .social-links a {
-            color: rgba(255,255,255,0.6);
+            color: #8A9BA8;
             text-decoration: none;
             font-size: 20px;
         }
@@ -709,16 +652,13 @@
             text-align: center;
             padding-top: 30px;
             border-top: 1px solid rgba(255,255,255,0.1);
-            color: rgba(255,255,255,0.4);
+            color: #8A9BA8;
             font-size: 14px;
         }
 
         /* Адаптивность */
         @media (max-width: 1200px) {
             .products-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-            .stages-grid {
                 grid-template-columns: repeat(2, 1fr);
             }
         }
@@ -739,15 +679,11 @@
             }
             .benefits-grid,
             .products-grid,
-            .stages-grid,
-            .partners-grid,
+            .about-container,
             .testimonials-grid,
             .steps-grid,
             .science-grid,
             .footer-grid {
-                grid-template-columns: 1fr;
-            }
-            .company-container {
                 grid-template-columns: 1fr;
             }
         }
@@ -763,8 +699,8 @@
             </div>
             <ul class="nav-menu">
                 <li><a href="#products">Продукты</a></li>
+                <li><a href="#about">О нас</a></li>
                 <li><a href="#science">Наука</a></li>
-                <li><a href="#production">Производство</a></li>
                 <li><a href="#contacts">Контакты</a></li>
             </ul>
             <button class="cart-btn">Корзина</button>
@@ -780,15 +716,12 @@
         <div class="hero-content">
             <div class="container hero-container">
                 <div class="hero-text">
-                    <h1 class="hero-title">Прокачайте свой мозг<br>без химии</h1>
-                    <p class="hero-subtitle">Грибные адаптогены для памяти, фокуса и энергии. 100% натурально, выращено в России.</p>
+                    <h1 class="hero-title">Прокачайте свой <span>мозг</span><br>без химии</h1>
+                    <p class="hero-subtitle">Грибные адаптогены для памяти, фокуса и энергии. 100% натурально, напрямую от производителя.</p>
                     <div class="hero-buttons">
                         <button class="btn-primary">Выбрать продукт</button>
                         <button class="btn-secondary">Узнать больше</button>
                     </div>
-                </div>
-                <div class="hero-image">
-                    <img src="https://mycofarm.ru/upload/iblock/19d/ubfrhvous5sm2z1ec5o80bjkmzkxdwc6.jpg" alt="Грибная ферма" style="width: 100%; border-radius: 20px;">
                 </div>
             </div>
         </div>
@@ -797,29 +730,29 @@
     <!-- Преимущества -->
     <section class="benefits">
         <div class="container">
-            <h2 class="section-title">Природа знает, как помочь мозгу</h2>
-            <p class="section-subtitle">Тысячелетия эволюции, создавшие молекулы для вашей продуктивности</p>
+            <h2 class="section-title">Почему выбирают нас</h2>
+            <p class="section-subtitle">Мы выращиваем сами — от грибницы до готового продукта</p>
             <div class="benefits-grid">
                 <div class="benefit-card">
                     <div class="benefit-icon">🌿</div>
                     <h3 class="benefit-title">100% натурально</h3>
-                    <p class="benefit-text">Без ГМО, без пестицидов, без химии. Только чистая сила природы.</p>
+                    <p class="benefit-text">Без ГМО, без пестицидов, без химии. Только чистая сила природы в каждом продукте.</p>
                 </div>
                 <div class="benefit-card">
                     <div class="benefit-icon">🔬</div>
-                    <h3 class="benefit-title">Подтверждено наукой</h3>
-                    <p class="benefit-text">Исследования в PubMed и собственные разработки. Каждая партия тестируется.</p>
+                    <h3 class="benefit-title">Лабораторный контроль</h3>
+                    <p class="benefit-text">Каждая партия проходит тестирование. Мы гарантируем чистоту и эффективность.</p>
                 </div>
                 <div class="benefit-card">
                     <div class="benefit-icon">🇷🇺</div>
-                    <h3 class="benefit-title">Сделано в России</h3>
-                    <p class="benefit-text">Собственная ферма в Санкт-Петербурге, полный цикл производства.</p>
+                    <h3 class="benefit-title">Своя ферма</h3>
+                    <p class="benefit-text">Собственное производство в Санкт-Петербурге. Полный цикл выращивания и переработки.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Продукты -->
+    <!-- Продукты (с вашими фото) -->
     <section id="products" class="products">
         <div class="container">
             <h2 class="section-title">Наши продукты</h2>
@@ -842,7 +775,7 @@
                     <div class="product-info">
                         <h3 class="product-title">Кордицепс</h3>
                         <div class="product-subtitle">Cordyceps militaris</div>
-                        <p class="product-description">Для энергии и выносливости. Природный адаптоген, повышающий физическую и умственную работоспособность.</p>
+                        <p class="product-description">Для энергии и выносливости. Природный адаптоген, повышающий работоспособность.</p>
                         <div class="product-price">2 190 ₽</div>
                         <button class="product-btn">В корзину</button>
                     </div>
@@ -864,7 +797,7 @@
                     <div class="product-info">
                         <h3 class="product-title">Траметес</h3>
                         <div class="product-subtitle">Trametes versicolor</div>
-                        <p class="product-description">Для иммунитета и поддержки микробиоты. Обладает мощными антиоксидантными свойствами.</p>
+                        <p class="product-description">Для иммунитета и поддержки микробиоты. Мощные антиоксидантные свойства.</p>
                         <div class="product-price">2 090 ₽</div>
                         <button class="product-btn">В корзину</button>
                     </div>
@@ -873,83 +806,46 @@
         </div>
     </section>
 
-    <!-- Блок о компании (как на mycofarm) -->
-    <section class="company-text">
-        <div class="container company-container">
+    <!-- О производстве (напрямую от производителя) -->
+    <section id="about" class="about">
+        <div class="container about-container">
             <div>
-                <h2 class="company-title">Нейробиотикс — Ваш грибной партнер</h2>
-                <p style="margin-bottom: 30px; font-size: 18px; color: #2a7f9c; font-weight: 500;">Собственное производство в Санкт-Петербурге</p>
-                <ul class="company-list">
-                    <li>Организуем персональные экскурсии для клиентов и партнеров — вы сможете лично познакомиться с нашей технологией и подходом к производству</li>
-                    <li>Полный производственный цикл в одном месте — от грибной культуры в чашке Петри до готового продукта</li>
-                    <li>Качество и стабильность наших БАДов подтверждены прозрачной цепочкой происхождения</li>
-                    <li>Предоставляем полный комплект документов: СГР, маркировка Честный Знак и все необходимое для законной торговли</li>
+                <h2 class="about-title">Мы — <span>производитель</span></h2>
+                <p class="about-text">Мы не перепродаём и не привлекаем посредников. Вся продукция выращивается на нашей собственной ферме в Санкт-Петербурге — от грибной культуры в чашке Петри до готовых капсул в ваших руках.</p>
+                <ul class="about-list">
+                    <li>Полный цикл производства на одной площадке</li>
+                    <li>Лабораторный контроль каждой партии</li>
+                    <li>Экстракция, сохраняющая все активные вещества</li>
+                    <li>Без ГМО, без пестицидов, без химии</li>
+                    <li>Продаём напрямую — без наценок посредников</li>
                 </ul>
             </div>
             <div>
-                <img src="https://mycofarm.ru/upload/iblock/19d/ubfrhvous5sm2z1ec5o80bjkmzkxdwc6.jpg" alt="Производство" class="company-image">
+                <img src="https://mycofarm.ru/upload/iblock/19d/ubfrhvous5sm2z1ec5o80bjkmzkxdwc6.jpg" alt="Наше производство" class="about-image">
             </div>
         </div>
     </section>
 
-    <!-- Этапы работы -->
-    <section class="stages">
+    <!-- Как начать (просто для покупателя) -->
+    <section class="steps">
         <div class="container">
-            <h2 class="stages-title">Цикл работы</h2>
-            <div class="stages-grid">
-                <div class="stage-card">
-                    <div class="stage-number">01</div>
-                    <h3 class="stage-title">Консультация</h3>
-                    <p class="stage-desc">Экскурсия по грибной ферме. Показываем, как производятся грибные БАДы, отвечаем на вопросы.</p>
+            <h2 class="section-title">Как получить продукт</h2>
+            <p class="section-subtitle">Всё просто и прозрачно</p>
+            <div class="steps-grid">
+                <div class="step-card">
+                    <div class="step-number">1</div>
+                    <h3 class="step-title">Выберите продукт</h3>
+                    <p class="step-desc">Ежовик, кордицепс, рейши или траметес — то, что нужно именно вам</p>
                 </div>
-                <div class="stage-card">
-                    <div class="stage-number">02</div>
-                    <h3 class="stage-title">Производство</h3>
-                    <p class="stage-desc">Сбор комплектующих, производство, маркировка и упаковка продукции под требования заказчика.</p>
+                <div class="step-card">
+                    <div class="step-number">2</div>
+                    <h3 class="step-title">Оформите заказ</h3>
+                    <p class="step-desc">Просто добавьте в корзину и заполните данные для доставки</p>
                 </div>
-                <div class="stage-card">
-                    <div class="stage-number">03</div>
-                    <h3 class="stage-title">Логистика</h3>
-                    <p class="stage-desc">Обеспечение правильной упаковки и хранения. Отгрузка через ТК на склады заказчика.</p>
-                </div>
-                <div class="stage-card">
-                    <div class="stage-number">04</div>
-                    <h3 class="stage-title">Сопровождение</h3>
-                    <p class="stage-desc">Юридическая и экспертная поддержка, обновление маркетинговых материалов.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Партнеры -->
-    <section class="partners">
-        <div class="container">
-            <h2 class="section-title">С кем мы сотрудничаем</h2>
-            <p class="section-subtitle">Нам доверяют профессионалы</p>
-            <div class="partners-grid">
-                <div class="partner-card">
-                    <div class="partner-icon">🏥</div>
-                    <p class="partner-name">Аптеки</p>
-                </div>
-                <div class="partner-card">
-                    <div class="partner-icon">📱</div>
-                    <p class="partner-name">Блогеры</p>
-                </div>
-                <div class="partner-card">
-                    <div class="partner-icon">📦</div>
-                    <p class="partner-name">Селлеры</p>
-                </div>
-                <div class="partner-card">
-                    <div class="partner-icon">💼</div>
-                    <p class="partner-name">Предприниматели</p>
-                </div>
-                <div class="partner-card">
-                    <div class="partner-icon">🤝</div>
-                    <p class="partner-name">Дистрибьюторы</p>
-                </div>
-                <div class="partner-card">
-                    <div class="partner-icon">🏋️</div>
-                    <p class="partner-name">Спортивные магазины</p>
+                <div class="step-card">
+                    <div class="step-number">3</div>
+                    <h3 class="step-title">Получите и пользуйтесь</h3>
+                    <p class="step-desc">Доставка по всей России. Начинайте заботу о мозге уже через несколько дней</p>
                 </div>
             </div>
         </div>
@@ -959,15 +855,15 @@
     <section class="testimonials">
         <div class="container">
             <h2 class="section-title">Реальные истории</h2>
-            <p class="section-subtitle">Что говорят наши клиенты</p>
+            <p class="section-subtitle">Что говорят наши покупатели</p>
             <div class="testimonials-grid">
                 <div class="testimonial-card">
-                    <p class="testimonial-text">«После 2 недель приема ежовика перестала зависать над задачами. Мысли стали четче, как будто туман рассеялся».</p>
+                    <p class="testimonial-text">«После 2 недель приема ежовика перестала зависать над задачами. Мысли стали четче, как будто туман рассеялся. Заказываю теперь регулярно».</p>
                     <div class="testimonial-author">Анна, 34 года</div>
                     <div class="testimonial-role">IT-менеджер</div>
                 </div>
                 <div class="testimonial-card">
-                    <p class="testimonial-text">«Кордицепс реально дает энергии. Тренировки не валюсь, и голова ясная даже после работы».</p>
+                    <p class="testimonial-text">«Кордицепс реально дает энергии. Тренировки не валюсь, и голова ясная даже после работы. И главное — никакой химии».</p>
                     <div class="testimonial-author">Михаил, 28 лет</div>
                     <div class="testimonial-role">Спортсмен</div>
                 </div>
@@ -1003,8 +899,8 @@
     <!-- Форма обратной связи -->
     <section class="form-section">
         <div class="container form-container">
-            <h2 class="form-title">Свяжитесь с нами</h2>
-            <p class="form-subtitle">Оставьте свои данные, и мы свяжемся с вами в ближайшее время</p>
+            <h2 class="form-title">Остались вопросы?</h2>
+            <p class="form-subtitle">Напишите нам, и мы поможем подобрать продукт под ваши задачи</p>
             <form>
                 <div class="form-group">
                     <input type="text" class="form-input" placeholder="Ваше имя" required>
@@ -1029,6 +925,45 @@
                         Нейробиотикс
                         <span>натуральные усилители когнитивных функций</span>
                     </div>
-                    <p style="color: rgba(255,255,255,0.6); margin-bottom: 20px;">Собственное производство в Санкт-Петербурге. Полный цикл.</p>
+                    <p style="color: #8A9BA8; margin-bottom: 20px;">Собственное производство в Санкт-Петербурге. Полный цикл. Продажа напрямую.</p>
                     <div class="social-links">
                         <a href="#">📘</a>
+                        <a href="#">📷</a>
+                        <a href="#">✉️</a>
+                    </div>
+                </div>
+                <div>
+                    <h4 style="color: white; margin-bottom: 20px;">Каталог</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Ежовик гребенчатый</a></li>
+                        <li><a href="#">Кордицепс</a></li>
+                        <li><a href="#">Рейши</a></li>
+                        <li><a href="#">Траметес</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 style="color: white; margin-bottom: 20px;">Информация</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">О производстве</a></li>
+                        <li><a href="#">Доставка и оплата</a></li>
+                        <li><a href="#">Сертификаты</a></li>
+                        <li><a href="#">Статьи</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 style="color: white; margin-bottom: 20px;">Контакты</h4>
+                    <ul class="footer-links">
+                        <li>📞 +7 (999) 123-45-67</li>
+                        <li>✉️ info@neirobiotix.ru</li>
+                        <li>📍 Санкт-Петербург, ул. Грибная, 1</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2025 Нейробиотикс. Все права защищены. Продажа напрямую от производителя.</p>
+                <p style="margin-top: 10px; font-size: 12px;">*Информация на сайте не является медицинской консультацией. Перед применением проконсультируйтесь со специалистом.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
