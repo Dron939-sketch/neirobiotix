@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Нейробиотикс — натуральные усилители когнитивных функций</title>
+    <title>Нейробиотикс — сила природы для ясности ума</title>
     <style>
         * {
             margin: 0;
@@ -12,10 +12,10 @@
         }
 
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
             line-height: 1.6;
-            color: #1a1a1a;
-            background: #ffffff;
+            color: #1a2a3a;
+            background: #f0f8ff;
         }
 
         .container {
@@ -27,8 +27,9 @@
         /* Навигация */
         .navbar {
             padding: 20px 0;
-            border-bottom: 1px solid #eaeaea;
-            background: white;
+            background: rgba(255,255,255,0.8);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(0,50,80,0.1);
             position: sticky;
             top: 0;
             z-index: 100;
@@ -41,17 +42,21 @@
         }
 
         .logo {
-            font-size: 24px;
-            font-weight: 600;
-            color: #1a4d2e;
+            font-size: 26px;
+            font-weight: 700;
+            background: linear-gradient(135deg, #1e4d6e, #2a7f9c);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
             letter-spacing: -0.5px;
         }
 
         .logo span {
             font-size: 14px;
             font-weight: 400;
-            color: #666;
+            color: #4a6f8a;
             display: block;
+            background: none;
+            -webkit-text-fill-color: #4a6f8a;
         }
 
         .nav-menu {
@@ -62,34 +67,36 @@
 
         .nav-menu a {
             text-decoration: none;
-            color: #333;
+            color: #1e3a5f;
             font-weight: 500;
             transition: color 0.3s;
         }
 
         .nav-menu a:hover {
-            color: #1a4d2e;
+            color: #2a7f9c;
         }
 
         .cart-btn {
-            background: #1a4d2e;
+            background: linear-gradient(135deg, #1e4d6e, #2a7f9c);
             color: white;
             border: none;
-            padding: 10px 20px;
-            border-radius: 30px;
+            padding: 12px 25px;
+            border-radius: 40px;
             cursor: pointer;
             font-weight: 600;
-            transition: background 0.3s;
+            transition: transform 0.3s, box-shadow 0.3s;
+            box-shadow: 0 4px 15px rgba(42, 127, 156, 0.3);
         }
 
         .cart-btn:hover {
-            background: #0f3821;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(42, 127, 156, 0.4);
         }
 
         /* Герой секция */
         .hero {
             padding: 80px 0;
-            background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+            background: linear-gradient(135deg, #e1f0fa 0%, #f0f8ff 100%);
         }
 
         .hero-container {
@@ -100,16 +107,16 @@
         }
 
         .hero-title {
-            font-size: 48px;
+            font-size: 52px;
             font-weight: 700;
             line-height: 1.2;
             margin-bottom: 20px;
-            color: #1a1a1a;
+            color: #0a2a3a;
         }
 
         .hero-subtitle {
             font-size: 18px;
-            color: #666;
+            color: #2a4a6a;
             margin-bottom: 30px;
         }
 
@@ -118,45 +125,47 @@
             gap: 20px;
         }
 
-        .btn-primary {
-            background: #1a4d2e;
-            color: white;
-            border: none;
+        .btn-primary, .btn-secondary {
             padding: 15px 35px;
-            border-radius: 30px;
-            font-size: 16px;
-            font-weight: 600;
-            cursor: pointer;
-            transition: background 0.3s;
-        }
-
-        .btn-secondary {
-            background: transparent;
-            color: #1a4d2e;
-            border: 2px solid #1a4d2e;
-            padding: 13px 33px;
-            border-radius: 30px;
+            border-radius: 40px;
             font-size: 16px;
             font-weight: 600;
             cursor: pointer;
             transition: all 0.3s;
+            border: none;
+        }
+
+        .btn-primary {
+            background: #1e4d6e;
+            color: white;
+            box-shadow: 0 4px 15px rgba(30, 77, 110, 0.3);
+        }
+
+        .btn-primary:hover {
+            background: #2a7f9c;
+            transform: translateY(-2px);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: #1e4d6e;
+            border: 2px solid #1e4d6e;
         }
 
         .btn-secondary:hover {
-            background: #1a4d2e;
+            background: #1e4d6e;
             color: white;
         }
 
         .hero-image {
             width: 100%;
-            border-radius: 20px;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            border-radius: 30px;
+            box-shadow: 0 20px 40px rgba(30, 77, 110, 0.2);
         }
 
         /* Преимущества */
         .benefits {
             padding: 60px 0;
-            background: white;
         }
 
         .benefits-grid {
@@ -169,8 +178,11 @@
         .benefit-card {
             text-align: center;
             padding: 30px;
-            background: #f8f9fa;
-            border-radius: 20px;
+            background: rgba(255,255,255,0.7);
+            backdrop-filter: blur(5px);
+            border-radius: 30px;
+            box-shadow: 0 10px 30px rgba(0,30,50,0.05);
+            border: 1px solid rgba(255,255,255,0.5);
         }
 
         .benefit-icon {
@@ -182,79 +194,86 @@
             font-size: 20px;
             font-weight: 600;
             margin-bottom: 10px;
-            color: #1a4d2e;
+            color: #1e4d6e;
         }
 
         .benefit-text {
-            color: #666;
+            color: #3a5a7a;
         }
 
         /* Продукты */
         .products {
             padding: 80px 0;
-            background: #f8f9fa;
         }
 
         .section-title {
-            font-size: 36px;
+            font-size: 42px;
             font-weight: 700;
             text-align: center;
             margin-bottom: 20px;
-            color: #1a1a1a;
+            color: #0a2a3a;
         }
 
         .section-subtitle {
             text-align: center;
-            color: #666;
+            color: #3a5a7a;
             margin-bottom: 60px;
             font-size: 18px;
         }
 
         .products-grid {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 30px;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 25px;
         }
 
         .product-card {
-            background: white;
-            border-radius: 20px;
+            background: rgba(255,255,255,0.7);
+            backdrop-filter: blur(5px);
+            border-radius: 30px;
             overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-            transition: transform 0.3s;
+            box-shadow: 0 15px 35px rgba(30, 77, 110, 0.1);
+            transition: all 0.4s;
+            border: 1px solid rgba(255,255,255,0.5);
         }
 
         .product-card:hover {
-            transform: translateY(-10px);
+            transform: translateY(-15px) scale(1.02);
+            box-shadow: 0 30px 45px rgba(30, 77, 110, 0.2);
         }
 
         .product-image {
             width: 100%;
-            height: 300px;
+            height: 280px;
             object-fit: cover;
-            background: #f0f0f0;
+            transition: transform 0.6s;
+        }
+
+        .product-card:hover .product-image {
+            transform: scale(1.1);
         }
 
         .product-info {
             padding: 25px;
+            background: rgba(255,255,255,0.5);
         }
 
         .product-title {
-            font-size: 24px;
+            font-size: 22px;
             font-weight: 600;
             margin-bottom: 5px;
-            color: #1a1a1a;
+            color: #0a2a3a;
         }
 
         .product-subtitle {
-            color: #1a4d2e;
+            color: #2a7f9c;
             font-weight: 500;
             margin-bottom: 15px;
             font-size: 14px;
         }
 
         .product-description {
-            color: #666;
+            color: #3a5a7a;
             margin-bottom: 20px;
             font-size: 14px;
         }
@@ -262,26 +281,29 @@
         .product-price {
             font-size: 24px;
             font-weight: 700;
-            color: #1a4d2e;
+            color: #1e4d6e;
             margin-bottom: 20px;
         }
 
         .product-btn {
             width: 100%;
-            background: #1a4d2e;
+            background: linear-gradient(135deg, #1e4d6e, #2a7f9c);
             color: white;
             border: none;
             padding: 12px;
-            border-radius: 10px;
+            border-radius: 20px;
             font-weight: 600;
             cursor: pointer;
-            transition: background 0.3s;
+            transition: opacity 0.3s;
+        }
+
+        .product-btn:hover {
+            opacity: 0.9;
         }
 
         /* Производство */
         .production {
             padding: 80px 0;
-            background: white;
         }
 
         .production-grid {
@@ -293,7 +315,8 @@
 
         .production-image {
             width: 100%;
-            border-radius: 20px;
+            border-radius: 30px;
+            box-shadow: 0 20px 40px rgba(30, 77, 110, 0.2);
         }
 
         .production-list {
@@ -305,20 +328,39 @@
             margin-bottom: 15px;
             padding-left: 30px;
             position: relative;
+            color: #2a4a6a;
         }
 
         .production-list li:before {
-            content: "✅";
-            color: #1a4d2e;
+            content: "✨";
+            color: #2a7f9c;
             font-weight: bold;
             position: absolute;
             left: 0;
         }
 
+        /* Видео секция */
+        .video-section {
+            padding: 60px 0;
+            background: linear-gradient(135deg, #e1f0fa, #f0f8ff);
+        }
+
+        .video-container {
+            max-width: 800px;
+            margin: 0 auto;
+            border-radius: 30px;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(30,77,110,0.2);
+        }
+
+        video {
+            width: 100%;
+            display: block;
+        }
+
         /* Кейсы */
         .testimonials {
             padding: 80px 0;
-            background: #f8f9fa;
         }
 
         .testimonials-grid {
@@ -329,33 +371,34 @@
         }
 
         .testimonial-card {
-            background: white;
+            background: rgba(255,255,255,0.7);
+            backdrop-filter: blur(5px);
             padding: 30px;
-            border-radius: 20px;
+            border-radius: 30px;
             box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            border: 1px solid rgba(255,255,255,0.5);
         }
 
         .testimonial-text {
             font-size: 16px;
             font-style: italic;
             margin-bottom: 20px;
-            color: #333;
+            color: #2a4a6a;
         }
 
         .testimonial-author {
             font-weight: 600;
-            color: #1a4d2e;
+            color: #1e4d6e;
         }
 
         .testimonial-role {
-            color: #666;
+            color: #5a7a9a;
             font-size: 14px;
         }
 
         /* Шаги */
         .steps {
             padding: 80px 0;
-            background: white;
         }
 
         .steps-grid {
@@ -368,26 +411,27 @@
         .step-card {
             text-align: center;
             padding: 30px;
+            background: rgba(255,255,255,0.5);
+            border-radius: 30px;
         }
 
         .step-number {
-            width: 50px;
-            height: 50px;
-            background: #1a4d2e;
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #1e4d6e, #2a7f9c);
             color: white;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 24px;
-            font-weight: 600;
+            font-size: 28px;
+            font-weight: 700;
             margin: 0 auto 20px;
         }
 
         /* Научная база */
         .science {
             padding: 80px 0;
-            background: #f8f9fa;
         }
 
         .science-grid {
@@ -408,7 +452,7 @@
             font-size: 18px;
             font-weight: 600;
             margin-bottom: 10px;
-            color: #1a4d2e;
+            color: #1e4d6e;
         }
 
         .science-meta {
@@ -418,7 +462,7 @@
         }
 
         .science-link {
-            color: #1a4d2e;
+            color: #1e4d6e;
             text-decoration: none;
             font-weight: 500;
             font-size: 14px;
@@ -520,16 +564,6 @@
                 gap: 30px;
             }
         }
-
-        /* Временные заглушки для изображений */
-        .image-placeholder {
-            background: linear-gradient(135deg, #1a4d2e 0%, #0f3821 100%);
-            color: white;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 14px;
-        }
     </style>
 </head>
 <body>
@@ -550,7 +584,7 @@
         </div>
     </nav>
 
-    <!-- Герой секция -->
+    <!-- Герой секция (с фото с mycofarm.ru) -->
     <section class="hero">
         <div class="container hero-container">
             <div>
@@ -562,29 +596,29 @@
                 </div>
             </div>
             <div>
-                <img src="/api/placeholder/600/400" alt="Ежовик гребенчатый" class="hero-image image-placeholder">
+                <img src="https://mycofarm.ru/upload/iblock/19d/ubfrhvous5sm2z1ec5o80bjkmzkxdwc6.jpg" alt="Грибная ферма" class="hero-image">
             </div>
         </div>
     </section>
 
-    <!-- Преимущества -->
+    <!-- Преимущества (с иконками с mycofarm.ru) -->
     <section class="benefits">
         <div class="container">
             <h2 class="section-title">Природа знает, как помочь мозгу</h2>
             <p class="section-subtitle">Тысячелетия эволюции, создавшие молекулы для вашей продуктивности</p>
             <div class="benefits-grid">
                 <div class="benefit-card">
-                    <div class="benefit-icon">🍄</div>
+                    <img src="https://mycofarm.ru/upload/iblock/d63/adj27a640miepkqe3n10w4ryfcgkjnw5.svg" alt="Натурально" class="benefit-icon" style="width: 64px; height: 64px;">
                     <h3 class="benefit-title">100% натурально</h3>
                     <p class="benefit-text">Без ГМО, без пестицидов, без химии</p>
                 </div>
                 <div class="benefit-card">
-                    <div class="benefit-icon">🔬</div>
+                    <img src="https://mycofarm.ru/upload/iblock/2bc/h01ud3yqclgj9nah895n7dhh4qs6fru9.svg" alt="Наука" class="benefit-icon" style="width: 64px; height: 64px;">
                     <h3 class="benefit-title">Подтверждено наукой</h3>
                     <p class="benefit-text">Исследования в PubMed и собственные разработки</p>
                 </div>
                 <div class="benefit-card">
-                    <div class="benefit-icon">🇷🇺</div>
+                    <img src="https://mycofarm.ru/upload/iblock/681/3mkxv8n2zvmojj7s5inbn0zwgv88srlg.svg" alt="Сделано в России" class="benefit-icon" style="width: 64px; height: 64px;">
                     <h3 class="benefit-title">Сделано в России</h3>
                     <p class="benefit-text">Собственная ферма, полный цикл производства</p>
                 </div>
@@ -592,7 +626,7 @@
         </div>
     </section>
 
-    <!-- Продукты -->
+    <!-- Продукты (с вашими фото) -->
     <section id="products" class="products">
         <div class="container">
             <h2 class="section-title">Наши продукты</h2>
@@ -600,7 +634,7 @@
             <div class="products-grid">
                 <!-- Ежовик -->
                 <div class="product-card">
-                    <div class="product-image image-placeholder">Ежовик гребенчатый</div>
+                    <img src="https://i.postimg.cc/BZkJMh84/ezhovik-1.jpg" alt="Ежовик гребенчатый" class="product-image">
                     <div class="product-info">
                         <h3 class="product-title">Ежовик гребенчатый</h3>
                         <div class="product-subtitle">Lion's Mane</div>
@@ -611,7 +645,7 @@
                 </div>
                 <!-- Кордицепс -->
                 <div class="product-card">
-                    <div class="product-image image-placeholder">Кордицепс</div>
+                    <img src="https://i.postimg.cc/C1WLBJkx/kordiceps-2.jpg" alt="Кордицепс" class="product-image">
                     <div class="product-info">
                         <h3 class="product-title">Кордицепс</h3>
                         <div class="product-subtitle">Cordyceps militaris</div>
@@ -622,7 +656,7 @@
                 </div>
                 <!-- Рейши -->
                 <div class="product-card">
-                    <div class="product-image image-placeholder">Рейши</div>
+                    <img src="https://i.postimg.cc/Hs0snwL6/reishi-1.jpg" alt="Рейши" class="product-image">
                     <div class="product-info">
                         <h3 class="product-title">Рейши</h3>
                         <div class="product-subtitle">Ganoderma lucidum</div>
@@ -631,15 +665,31 @@
                         <button class="product-btn">В корзину</button>
                     </div>
                 </div>
+                <!-- Траметес -->
+                <div class="product-card">
+                    <img src="https://i.postimg.cc/YS0pdTxj/trametes-1.jpg" alt="Траметес" class="product-image">
+                    <div class="product-info">
+                        <h3 class="product-title">Траметес</h3>
+                        <div class="product-subtitle">Trametes versicolor</div>
+                        <p class="product-description">Для иммунитета и поддержки микробиоты. Обладает мощными антиоксидантными свойствами.</p>
+                        <div class="product-price">2 090 ₽</div>
+                        <button class="product-btn">В корзину</button>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Производство -->
+    <!-- Производство (с вашим видео) -->
     <section id="production" class="production">
         <div class="container production-grid">
             <div>
-                <img src="/api/placeholder/600/400" alt="Лаборатория" class="production-image image-placeholder">
+                <div class="video-container">
+                    <video controls autoplay muted loop playsinline>
+                        <source src="https://files.catbox.moe/5i8bkm.mp4" type="video/mp4">
+                        Ваш браузер не поддерживает видео.
+                    </video>
+                </div>
             </div>
             <div>
                 <h2 class="section-title" style="text-align: left;">От науки к результату</h2>
@@ -681,7 +731,7 @@
                 <div class="step-card">
                     <div class="step-number">1</div>
                     <h3 style="margin-bottom: 10px;">Выберите продукт</h3>
-                    <p style="color: #666;">Ежовик, кордицепс, рейши или комплексы</p>
+                    <p style="color: #666;">Ежовик, кордицепс, рейши или траметес</p>
                 </div>
                 <div class="step-card">
                     <div class="step-number">2</div>
@@ -700,23 +750,26 @@
         </div>
     </section>
 
-    <!-- Научная база -->
+    <!-- Научная база (с фото сертификатов с mycofarm.ru) -->
     <section id="science" class="science">
         <div class="container">
             <h2 class="section-title">Опираемся на исследования</h2>
             <p class="section-subtitle">Активные вещества грибов изучаются по всему миру</p>
             <div class="science-grid">
                 <div class="science-card">
+                    <img src="https://mycofarm.ru/upload/iblock/5af/x6efehvosekpi2embxcmfpl90rhcfkxv.jpg" alt="Сертификат" style="width: 100%; border-radius: 10px; margin-bottom: 15px;">
                     <h3 class="science-title">Hericium erinaceus и когнитивные функции</h3>
                     <div class="science-meta">PubMed, 2023</div>
                     <a href="#" class="science-link">Читать исследование →</a>
                 </div>
                 <div class="science-card">
+                    <img src="https://mycofarm.ru/upload/iblock/563/x8xofm8qxoup8185wrj585g2efu2c5wr.jpg" alt="Сертификат" style="width: 100%; border-radius: 10px; margin-bottom: 15px;">
                     <h3 class="science-title">Cordyceps militaris и выносливость</h3>
                     <div class="science-meta">Мета-анализ, 2022</div>
                     <a href="#" class="science-link">Читать исследование →</a>
                 </div>
                 <div class="science-card">
+                    <img src="https://mycofarm.ru/upload/iblock/b25/eq3chhkpja6929hydpsvh6rxbqpow1zo.jpg" alt="Сертификат" style="width: 100%; border-radius: 10px; margin-bottom: 15px;">
                     <h3 class="science-title">Ganoderma lucidum и нервная система</h3>
                     <div class="science-meta">Обзор, 2024</div>
                     <a href="#" class="science-link">Читать исследование →</a>
@@ -747,7 +800,7 @@
                         <li><a href="#">Ежовик гребенчатый</a></li>
                         <li><a href="#">Кордицепс</a></li>
                         <li><a href="#">Рейши</a></li>
-                        <li><a href="#">Комплексы</a></li>
+                        <li><a href="#">Траметес</a></li>
                     </ul>
                 </div>
                 <div>
