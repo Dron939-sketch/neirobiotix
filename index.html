@@ -102,6 +102,8 @@
             font-size: 15px;
             transition: transform 0.3s, box-shadow 0.3s;
             box-shadow: 0 4px 15px rgba(41, 199, 198, 0.3);
+            text-decoration: none;
+            display: inline-block;
         }
 
         .cart-btn:hover {
@@ -183,6 +185,8 @@
             cursor: pointer;
             transition: all 0.3s;
             border: none;
+            text-decoration: none;
+            display: inline-block;
         }
 
         .btn-primary {
@@ -346,13 +350,16 @@
             font-weight: 600;
             cursor: pointer;
             transition: opacity 0.3s;
+            text-decoration: none;
+            display: inline-block;
+            text-align: center;
         }
 
         .product-btn:hover {
             opacity: 0.9;
         }
 
-        /* О производстве (без партнеров) */
+        /* О производстве */
         .about {
             padding: 80px 0;
             background: #f8faff;
@@ -444,7 +451,7 @@
             font-size: 14px;
         }
 
-        /* Как начать (просто для покупателя) */
+        /* Как начать */
         .steps {
             padding: 80px 0;
             background: #f8faff;
@@ -639,6 +646,11 @@
             color: rgba(255,255,255,0.6);
             text-decoration: none;
             font-size: 20px;
+            transition: color 0.3s;
+        }
+
+        .social-links a:hover {
+            color: #29c7c6;
         }
 
         .footer-bottom {
@@ -679,6 +691,9 @@
             .footer-grid {
                 grid-template-columns: 1fr;
             }
+            .container {
+                padding: 0 20px;
+            }
         }
     </style>
 </head>
@@ -687,39 +702,39 @@
     <nav class="navbar">
         <div class="container nav-container">
             <div class="logo">
-                Нейробиотикс
+                <a href="index.html" style="text-decoration: none; color: inherit;">Нейробиотикс</a>
                 <span>натуральные усилители когнитивных функций</span>
             </div>
             <ul class="nav-menu">
-                <li><a href="#products">Продукты</a></li>
+                <li><a href="catalog.html">Продукты</a></li>
                 <li><a href="#about">О нас</a></li>
                 <li><a href="#science">Наука</a></li>
-                <li><a href="#contacts">Контакты</a></li>
+                <li><a href="contacts.html">Контакты</a></li>
             </ul>
-            <button class="cart-btn">Корзина</button>
+            <a href="cart.html" class="cart-btn">Корзина</a>
         </div>
     </nav>
 
-    <!-- Герой секция с видео-фоном (ссылка с mycofarm) -->
-<section class="hero">
-    <video class="hero-video" autoplay muted loop playsinline>
-        <source src="https://mycofarm.ru/upload/iblock/cdd/0iil07cbjv2jaawm3ahe2be4pcekw7kn.mp4" type="video/mp4">
-        Ваш браузер не поддерживает видео.
-    </video>
-    <div class="hero-overlay"></div>
-    <div class="hero-content">
-        <div class="container hero-container">
-            <div class="hero-text">
-                <h1 class="hero-title">Прокачайте свой мозг<br>без химии</h1>
-                <p class="hero-subtitle">Грибные адаптогены для памяти, фокуса и энергии. 100% натурально, напрямую от производителя.</p>
-                <div class="hero-buttons">
-                    <button class="btn-primary">Выбрать продукт</button>
-                    <button class="btn-secondary">Узнать больше</button>
+    <!-- Герой секция с видео-фоном -->
+    <section class="hero">
+        <video class="hero-video" autoplay muted loop playsinline>
+            <source src="https://mycofarm.ru/upload/iblock/cdd/0iil07cbjv2jaawm3ahe2be4pcekw7kn.mp4" type="video/mp4">
+            Ваш браузер не поддерживает видео.
+        </video>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <div class="container hero-container">
+                <div class="hero-text">
+                    <h1 class="hero-title">Прокачайте свой мозг<br>без химии</h1>
+                    <p class="hero-subtitle">Грибные адаптогены для памяти, фокуса и энергии. 100% натурально, напрямую от производителя.</p>
+                    <div class="hero-buttons">
+                        <a href="catalog.html" class="btn-primary">Выбрать продукт</a>
+                        <a href="#about" class="btn-secondary">Узнать больше</a>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
     <!-- Преимущества -->
     <section class="benefits">
@@ -746,7 +761,7 @@
         </div>
     </section>
 
-    <!-- Продукты -->
+    <!-- Продукты (краткий обзор) -->
     <section id="products" class="products">
         <div class="container">
             <h2 class="section-title">Наши продукты</h2>
@@ -758,9 +773,9 @@
                     <div class="product-info">
                         <h3 class="product-title">Ежовик гребенчатый</h3>
                         <div class="product-subtitle">Lion's Mane</div>
-                        <p class="product-description">Для ясности ума, памяти и против "тумана" в голове. Стимулирует синтез фактора роста нервов.</p>
+                        <p class="product-description">Для ясности ума, памяти и против "тумана" в голове.</p>
                         <div class="product-price">1 990 ₽</div>
-                        <button class="product-btn">В корзину</button>
+                        <a href="product.html?id=ezhovik" class="product-btn">Подробнее</a>
                     </div>
                 </div>
                 <!-- Кордицепс -->
@@ -769,9 +784,9 @@
                     <div class="product-info">
                         <h3 class="product-title">Кордицепс</h3>
                         <div class="product-subtitle">Cordyceps militaris</div>
-                        <p class="product-description">Для энергии и выносливости. Природный адаптоген, повышающий работоспособность.</p>
+                        <p class="product-description">Для энергии и выносливости. Природный адаптоген.</p>
                         <div class="product-price">2 190 ₽</div>
-                        <button class="product-btn">В корзину</button>
+                        <a href="product.html?id=kordiceps" class="product-btn">Подробнее</a>
                     </div>
                 </div>
                 <!-- Рейши -->
@@ -780,9 +795,9 @@
                     <div class="product-info">
                         <h3 class="product-title">Рейши</h3>
                         <div class="product-subtitle">Ganoderma lucidum</div>
-                        <p class="product-description">Для спокойствия и качественного сна. Снижает тревожность, помогает восстановлению нервной системы.</p>
+                        <p class="product-description">Для спокойствия и качественного сна.</p>
                         <div class="product-price">2 090 ₽</div>
-                        <button class="product-btn">В корзину</button>
+                        <a href="product.html?id=reyshi" class="product-btn">Подробнее</a>
                     </div>
                 </div>
                 <!-- Траметес -->
@@ -791,16 +806,19 @@
                     <div class="product-info">
                         <h3 class="product-title">Траметес</h3>
                         <div class="product-subtitle">Trametes versicolor</div>
-                        <p class="product-description">Для иммунитета и поддержки микробиоты. Мощные антиоксидантные свойства.</p>
+                        <p class="product-description">Для иммунитета и поддержки микробиоты.</p>
                         <div class="product-price">2 090 ₽</div>
-                        <button class="product-btn">В корзину</button>
+                        <a href="product.html?id=trametes" class="product-btn">Подробнее</a>
                     </div>
                 </div>
+            </div>
+            <div style="text-align: center; margin-top: 40px;">
+                <a href="catalog.html" class="btn-primary" style="padding: 15px 50px;">Смотреть весь каталог</a>
             </div>
         </div>
     </section>
 
-    <!-- О производстве (напрямую от производителя) -->
+    <!-- О производстве -->
     <section id="about" class="about">
         <div class="container about-container">
             <div>
@@ -812,6 +830,7 @@
                     <li>Экстракция, сохраняющая все активные вещества</li>
                     <li>Продажа напрямую — без наценок</li>
                 </ul>
+                <a href="contacts.html" class="btn-primary" style="margin-top: 30px; display: inline-block;">Связаться с нами</a>
             </div>
             <div>
                 <img src="https://mycofarm.ru/upload/iblock/19d/ubfrhvous5sm2z1ec5o80bjkmzkxdwc6.jpg" alt="Наше производство" class="about-image">
@@ -844,7 +863,7 @@
         </div>
     </section>
 
-    <!-- Кейсы -->
+    <!-- Отзывы -->
     <section class="testimonials">
         <div class="container">
             <h2 class="section-title">Реальные истории</h2>
@@ -892,7 +911,7 @@
         <div class="container form-container">
             <h2 class="form-title">Остались вопросы?</h2>
             <p class="form-subtitle">Напишите нам, и мы поможем подобрать продукт</p>
-            <form>
+            <form action="cart.html" method="GET">
                 <div class="form-group">
                     <input type="text" class="form-input" placeholder="Ваше имя" required>
                 </div>
@@ -907,46 +926,47 @@
         </div>
     </section>
 
-    <!-- Футер -->
+    <!-- Футер с реальными контактами -->
     <footer id="contacts" class="footer">
         <div class="container">
             <div class="footer-grid">
                 <div>
                     <div class="footer-logo">
-                        Нейробиотикс
+                        <a href="index.html" style="text-decoration: none; color: inherit;">Нейробиотикс</a>
                         <span>натуральные усилители когнитивных функций</span>
                     </div>
-                    <p style="color: rgba(255,255,255,0.6); margin-bottom: 20px;">Собственное производство в Санкт-Петербурге. Продажа напрямую.</p>
+                    <p style="color: rgba(255,255,255,0.6); margin-bottom: 20px;">Собственное производство в Санкт-Петербурге. Продажа напрямую от производителя.</p>
                     <div class="social-links">
-                        <a href="#">📘</a>
-                        <a href="#">📷</a>
-                        <a href="#">✉️</a>
+                        <a href="https://vk.com/mycofarmru" target="_blank">📘</a>
+                        <a href="https://t.me/+-7uVhBYrSvYzODFi" target="_blank">✈️</a>
+                        <a href="https://www.youtube.com/@mycofarmru" target="_blank">📺</a>
                     </div>
                 </div>
                 <div>
                     <h4 style="color: white; margin-bottom: 20px;">Каталог</h4>
                     <ul class="footer-links">
-                        <li><a href="#">Ежовик гребенчатый</a></li>
-                        <li><a href="#">Кордицепс</a></li>
-                        <li><a href="#">Рейши</a></li>
-                        <li><a href="#">Траметес</a></li>
+                        <li><a href="product.html?id=ezhovik">Ежовик гребенчатый</a></li>
+                        <li><a href="product.html?id=kordiceps">Кордицепс</a></li>
+                        <li><a href="product.html?id=reyshi">Рейши</a></li>
+                        <li><a href="product.html?id=trametes">Траметес</a></li>
                     </ul>
                 </div>
                 <div>
                     <h4 style="color: white; margin-bottom: 20px;">Информация</h4>
                     <ul class="footer-links">
-                        <li><a href="#">О производстве</a></li>
-                        <li><a href="#">Доставка и оплата</a></li>
-                        <li><a href="#">Сертификаты</a></li>
+                        <li><a href="#about">О производстве</a></li>
+                        <li><a href="contacts.html">Доставка и оплата</a></li>
+                        <li><a href="contacts.html">Сертификаты</a></li>
                         <li><a href="#">Статьи</a></li>
                     </ul>
                 </div>
                 <div>
                     <h4 style="color: white; margin-bottom: 20px;">Контакты</h4>
                     <ul class="footer-links">
-                        <li>📞 +7 (999) 123-45-67</li>
-                        <li>✉️ info@neirobiotix.ru</li>
-                        <li>📍 Санкт-Петербург</li>
+                        <li>📞 <a href="tel:+78127485707" style="color: rgba(255,255,255,0.6);">+7 (812) 748-57-07</a></li>
+                        <li>✉️ <a href="mailto:info@mycofarm.ru" style="color: rgba(255,255,255,0.6);">info@mycofarm.ru</a></li>
+                        <li>📍 Санкт-Петербург, Кондратьевский пр., 72А</li>
+                        <li>🕒 Пн-Пт: 9:00 - 21:00</li>
                     </ul>
                 </div>
             </div>
