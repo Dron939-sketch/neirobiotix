@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Каталог продукции — Нейробиотикс</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        /* Базовые стили */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Montserrat', sans-serif; line-height: 1.6; color: #1e2a3a; background: #ffffff; }
+        .container { max-width: 1400px; margin: 0 auto; padding: 0 40px; }
+        
+        /* Навигация */
+        .navbar { padding: 20px 0; background: rgba(255,255,255,0.98); border-bottom: 1px solid rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 100; backdrop-filter: blur(10px); }
+        .nav-container { display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 28px; font-weight: 800; color: #29c7c6; letter-spacing: -0.5px; }
+        .logo span { font-size: 14px; font-weight: 400; color: #6b7a8a; display: block; }
+        .nav-menu { display: flex; gap: 40px; list-style: none; }
+        .nav-menu a { text-decoration: none; color: #1e2a3a; font-weight: 500; font-size: 16px; transition: color 0.3s; position: relative; }
+        .nav-menu a:hover { color: #29c7c6; }
+        .nav-menu a:after { content: ''; position: absolute; bottom: -5px; left: 0; width: 0; height: 2px; background: #29c7c6; transition: width 0.3s; }
+        .nav-menu a:hover:after { width: 100%; }
+        .cart-btn { background: linear-gradient(135deg, #29c7c6, #1e9a9a); color: white; border: none; padding: 12px 30px; border-radius: 50px; cursor: pointer; font-weight: 600; font-size: 15px; transition: transform 0.3s, box-shadow 0.3s; box-shadow: 0 4px 15px rgba(41, 199, 198, 0.3); text-decoration: none; display: inline-block; }
+        .cart-btn:hover { transform: translateY(-2px); box-shadow: 0 8px 25px rgba(41, 199, 198, 0.4); }
+
+        /* Хлебные крошки */
+        .breadcrumbs { padding: 20px 0; background: #f8faff; margin-bottom: 40px; }
+        .breadcrumbs-list { display: flex; gap: 10px; list-style: none; color: #6b7a8a; }
+        .breadcrumbs-list a { color: #6b7a8a; text-decoration: none; }
+        .breadcrumbs-list a:hover { color: #29c7c6; }
+
+        /* Заголовок страницы */
+        .page-title { font-size: 48px; font-weight: 700; margin-bottom: 20px; color: #1e2a3a; }
+        .page-subtitle { color: #6b7a8a; margin-bottom: 40px; font-size: 18px; }
+
+        /* Фильтры и сортировка */
+        .catalog-toolbar { display: flex; justify-content: space-between; align-items: center; margin-bottom: 30px; flex-wrap: wrap; gap: 20px; }
+        .filters { display: flex; gap: 15px; flex-wrap: wrap; }
+        .filter-select { padding: 12px 25px; border: 1px solid #e0e0e0; border-radius: 10px; font-family: 'Montserrat', sans-serif; background: white; cursor: pointer; }
+        .sort-select { padding: 12px 25px; border: 1px solid #e0e0e0; border-radius: 10px; font-family: 'Montserrat', sans-serif; background: white; cursor: pointer; }
+
+        /* Сетка каталога */
+        .catalog-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; margin-bottom: 60px; }
+        
+        .product-card { background: white; border-radius: 20px; overflow: hidden; box-shadow: 0 15px 35px rgba(0,0,0,0.1); transition: all 0.3s; border: 1px solid rgba(0,0,0,0.05); }
+        .product-card:hover { transform: translateY(-15px); box-shadow: 0 30px 45px rgba(41, 199, 198, 0.15); }
+        .product-image { width: 100%; height: 280px; object-fit: cover; }
+        .product-info { padding: 25px; }
+        .product-title { font-size: 22px; font-weight: 600; margin-bottom: 5px; color: #1e2a3a; }
+        .product-subtitle { color: #29c7c6; font-weight: 500; margin-bottom: 15px; font-size: 14px; text-transform: uppercase; letter-spacing: 1px; }
+        .product-description { color: #6b7a8a; margin-bottom: 20px; font-size: 14px; line-height: 1.7; }
+        .product-price { font-size: 28px; font-weight: 700; color: #1e2a3a; margin-bottom: 20px; }
+        .product-price small { font-size: 16px; font-weight: 400; color: #6b7a8a; }
+        .product-btn { width: 100%; background: linear-gradient(135deg, #29c7c6, #1e9a9a); color: white; border: none; padding: 14px; border-radius: 10px; font-weight: 600; cursor: pointer; transition: opacity 0.3s; text-decoration: none; display: inline-block; text-align: center; }
+        .product-btn:hover { opacity: 0.9; }
+
+        /* Пагинация */
+        .pagination { display: flex; justify-content: center; gap: 10px; margin: 60px 0; }
+        .pagination a { padding: 12px 20px; border: 1px solid #e0e0e0; border-radius: 10px; text-decoration: none; color: #1e2a3a; transition: all 0.3s; }
+        .pagination a:hover, .pagination a.active { background: #29c7c6; color: white; border-color: #29c7c6; }
+
+        /* Категории */
+        .categories { margin-bottom: 40px; }
+        .categories-grid { display: flex; gap: 15px; flex-wrap: wrap; }
+        .category-tag { padding: 12px 30px; background: #f8faff; border-radius: 30px; cursor: pointer; transition: all 0.3s; border: 1px solid transparent; text-decoration: none; color: #1e2a3a; display: inline-block; }
+        .category-tag:hover, .category-tag.active { background: #29c7c6; color: white; border-color: #29c7c6; }
+
+        /* Футер */
+        .footer { background: #1e2a3a; color: white; padding: 60px 0 30px; margin-top: 80px; }
+        .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 40px; margin-bottom: 40px; }
+        .footer-logo { font-size: 28px; font-weight: 700; color: #29c7c6; margin-bottom: 20px; }
+        .footer-logo span { font-size: 14px; color: rgba(255,255,255,0.6); display: block; }
+        .footer-links { list-style: none; }
+        .footer-links li { margin-bottom: 10px; }
+        .footer-links a { color: rgba(255,255,255,0.6); text-decoration: none; transition: color 0.3s; }
+        .footer-links a:hover { color: #29c7c6; }
+        .footer-bottom { text-align: center; padding-top: 30px; border-top: 1px solid rgba(255,255,255,0.1); color: rgba(255,255,255,0.4); font-size: 14px; }
+
+        /* Адаптивность */
+        @media (max-width: 1200px) {
+            .catalog-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+        @media (max-width: 768px) {
+            .catalog-grid { grid-template-columns: 1fr; }
+            .nav-menu { display: none; }
+            .catalog-toolbar { flex-direction: column; align-items: flex-start; }
+            .filters { width: 100%; }
+            .filter-select, .sort-select { width: 100%; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Навигация -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <div class="logo">
+                <a href="index.html" style="text-decoration: none; color: inherit;">Нейробиотикс</a>
+                <span>натуральные усилители когнитивных функций</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="catalog.html" style="color: #29c7c6;">Продукты</a></li>
+                <li><a href="index.html#about">О нас</a></li>
+                <li><a href="index.html#science">Наука</a></li>
+                <li><a href="contacts.html">Контакты</a></li>
+            </ul>
+            <a href="cart.html" class="cart-btn">Корзина</a>
+        </div>
+    </nav>
+
+    <!-- Хлебные крошки -->
+    <div class="breadcrumbs">
+        <div class="container">
+            <ul class="breadcrumbs-list">
+                <li><a href="index.html">Главная</a></li>
+                <li>Каталог</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="container">
+        <h1 class="page-title">Каталог продукции</h1>
+        <p class="page-subtitle">Грибные адаптогены напрямую от производителя</p>
+
+        <!-- Категории -->
+        <div class="categories">
+            <div class="categories-grid">
+                <a href="#" class="category-tag active">Все продукты</a>
+                <a href="#" class="category-tag">Ежовик</a>
+                <a href="#" class="category-tag">Кордицепс</a>
+                <a href="#" class="category-tag">Рейши</a>
+                <a href="#" class="category-tag">Траметес</a>
+                <a href="#" class="category-tag">Наборы</a>
+            </div>
+        </div>
+
+        <!-- Инструменты -->
+        <div class="catalog-toolbar">
+            <div class="filters">
+                <select class="filter-select">
+                    <option>Все формы выпуска</option>
+                    <option>Капсулы</option>
+                    <option>Порошок</option>
+                    <option>Экстракт</option>
+                </select>
+                <select class="filter-select">
+                    <option>По назначению</option>
+                    <option>Для памяти</option>
+                    <option>Для энергии</option>
+                    <option>Для сна</option>
+                    <option>Для иммунитета</option>
+                </select>
+            </div>
+            <select class="sort-select">
+                <option>По популярности</option>
+                <option>По цене (возрастание)</option>
+                <option>По цене (убывание)</option>
+                <option>По новизне</option>
+            </select>
+        </div>
+
+        <!-- Сетка товаров -->
+        <div class="catalog-grid">
+            <!-- Ежовик -->
+            <div class="product-card">
+                <img src="https://i.postimg.cc/BZkJMh84/ezhovik-1.jpg" alt="Ежовик гребенчатый" class="product-image">
+                <div class="product-info">
+                    <div class="product-subtitle">Hericium erinaceus</div>
+                    <h3 class="product-title">Ежовик гребенчатый</h3>
+                    <p class="product-description">Для ясности ума, памяти и нейрогенеза. Содержит эринацины и β-глюканы.</p>
+                    <div class="product-price">1 990 ₽ <small>/ 60 капсул</small></div>
+                    <a href="product.html?id=ezhovik" class="product-btn">Подробнее</a>
+                </div>
+            </div>
+            <!-- Кордицепс -->
+            <div class="product-card">
+                <img src="https://i.postimg.cc/C1WLBJkx/kordiceps-2.jpg" alt="Кордицепс" class="product-image">
+                <div class="product-info">
+                    <div class="product-subtitle">Cordyceps militaris</div>
+                    <h3 class="product-title">Кордицепс</h3>
+                    <p class="product-description">Для энергии, выносливости и адаптации к нагрузкам. Природный адаптоген.</p>
+                    <div class="product-price">2 190 ₽ <small>/ 60 капсул</small></div>
+                    <a href="product.html?id=kordiceps" class="product-btn">Подробнее</a>
+                </div>
+            </div>
+            <!-- Рейши -->
+            <div class="product-card">
+                <img src="https://i.postimg.cc/Hs0snwL6/reishi-1.jpg" alt="Рейши" class="product-image">
+                <div class="product-info">
+                    <div class="product-subtitle">Ganoderma lucidum</div>
+                    <h3 class="product-title">Рейши</h3>
+                    <p class="product-description">Для спокойствия, качественного сна и восстановления нервной системы.</p>
+                    <div class="product-price">2 090 ₽ <small>/ 60 капсул</small></div>
+                    <a href="product.html?id=reyshi" class="product-btn">Подробнее</a>
+                </div>
+            </div>
+            <!-- Траметес -->
+            <div class="product-card">
+                <img src="https://i.postimg.cc/YS0pdTxj/trametes-1.jpg" alt="Траметес" class="product-image">
+                <div class="product-info">
+                    <div class="product-subtitle">Trametes versicolor</div>
+                    <h3 class="product-title">Траметес</h3>
+                    <p class="product-description">Для иммунитета, антиоксидантной защиты и поддержки микробиоты.</p>
+                    <div class="product-price">2 090 ₽ <small>/ 60 капсул</small></div>
+                    <a href="product.html?id=trametes" class="product-btn">Подробнее</a>
+                </div>
+            </div>
+            <!-- Ежовик экстракт -->
+            <div class="product-card">
+                <img src="https://i.postimg.cc/BZkJMh84/ezhovik-1.jpg" alt="Ежовик экстракт" class="product-image">
+                <div class="product-info">
+                    <div class="product-subtitle">Двойной экстракт</div>
+                    <h3 class="product-title">Ежовик экстракт 8:1</h3>
+                    <p class="product-description">Концентрированная форма для максимального эффекта. Высокое содержание полисахаридов.</p>
+                    <div class="product-price">3 490 ₽ <small>/ 90 капсул</small></div>
+                    <a href="product.html?id=ezhovik-extract" class="product-btn">Подробнее</a>
+                </div>
+            </div>
+            <!-- Набор "Мозг" -->
+            <div class="product-card">
+                <img src="https://i.postimg.cc/BZkJMh84/ezhovik-1.jpg" alt="Набор для мозга" class="product-image">
+                <div class="product-info">
+                    <div class="product-subtitle">Комплекс</div>
+                    <h3 class="product-title">Набор "Ясность ума"</h3>
+                    <p class="product-description">Ежовик + Рейши для когнитивных функций и спокойствия.</p>
+                    <div class="product-price">3 800 ₽ <small>экономия 280₽</small></div>
+                    <a href="product.html?id=set-brain" class="product-btn">Подробнее</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Пагинация -->
+        <div class="pagination">
+            <a href="#" class="active">1</a>
+            <a href="#">2</a>
+            <a href="#">3</a>
+            <a href="#">4</a>
+            <a href="#">→</a>
+        </div>
+    </div>
+
+    <!-- Футер -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <div class="footer-logo">
+                        <a href="index.html" style="text-decoration: none; color: inherit;">Нейробиотикс</a>
+                        <span>натуральные усилители</span>
+                    </div>
+                    <p style="color: rgba(255,255,255,0.6);">Собственное производство в Санкт-Петербурге.</p>
+                </div>
+                <div>
+                    <h4 style="color: white; margin-bottom: 20px;">Каталог</h4>
+                    <ul class="footer-links">
+                        <li><a href="product.html?id=ezhovik">Ежовик</a></li>
+                        <li><a href="product.html?id=kordiceps">Кордицепс</a></li>
+                        <li><a href="product.html?id=reyshi">Рейши</a></li>
+                        <li><a href="product.html?id=trametes">Траметес</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 style="color: white; margin-bottom: 20px;">Контакты</h4>
+                    <ul class="footer-links">
+                        <li>📞 +7 (812) 748-57-07</li>
+                        <li>✉️ info@mycofarm.ru</li>
+                        <li>📍 Кондратьевский пр., 72А</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 style="color: white; margin-bottom: 20px;">Информация</h4>
+                    <ul class="footer-links">
+                        <li><a href="contacts.html">Доставка</a></li>
+                        <li><a href="contacts.html">Оплата</a></li>
+                        <li><a href="#">Сертификаты</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2025 Нейробиотикс. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
