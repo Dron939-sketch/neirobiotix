@@ -5,709 +5,129 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Нейробиотикс — натуральные усилители когнитивных функций</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript">
+        (function(m,e,t,r,i,k,a){
+            m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+            m[i].l=1*new Date();
+            for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+            k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+        })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=109013602', 'ym');
+
+        ym(109013602, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
+    </script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/109013602" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <!-- /Yandex.Metrika counter -->
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Montserrat', sans-serif;
-            line-height: 1.6;
-            color: #1e2a3a;
-            background: #ffffff;
-            overflow-x: hidden;
-        }
-
-        .container {
-            max-width: 1400px;
-            margin: 0 auto;
-            padding: 0 40px;
-        }
-
-        /* Навигация */
-        .navbar {
-            padding: 20px 0;
-            background: rgba(255,255,255,0.98);
-            border-bottom: 1px solid rgba(0,0,0,0.05);
-            position: sticky;
-            top: 0;
-            z-index: 100;
-            backdrop-filter: blur(10px);
-        }
-
-        .nav-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-            font-size: 28px;
-            font-weight: 800;
-            color: #29c7c6;
-            letter-spacing: -0.5px;
-        }
-
-        .logo span {
-            font-size: 14px;
-            font-weight: 400;
-            color: #6b7a8a;
-            display: block;
-        }
-
-        .nav-menu {
-            display: flex;
-            gap: 40px;
-            list-style: none;
-        }
-
-        .nav-menu a {
-            text-decoration: none;
-            color: #1e2a3a;
-            font-weight: 500;
-            font-size: 16px;
-            transition: color 0.3s;
-            position: relative;
-        }
-
-        .nav-menu a:hover {
-            color: #29c7c6;
-        }
-
-        .nav-menu a:after {
-            content: '';
-            position: absolute;
-            bottom: -5px;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background: #29c7c6;
-            transition: width 0.3s;
-        }
-
-        .nav-menu a:hover:after {
-            width: 100%;
-        }
-
-        .cart-btn {
-            background: linear-gradient(135deg, #29c7c6, #1e9a9a);
-            color: white;
-            border: none;
-            padding: 12px 30px;
-            border-radius: 50px;
-            cursor: pointer;
-            font-weight: 600;
-            font-size: 15px;
-            transition: transform 0.3s, box-shadow 0.3s;
-            box-shadow: 0 4px 15px rgba(41, 199, 198, 0.3);
-            text-decoration: none;
-            display: inline-block;
-        }
-
-        .cart-btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 25px rgba(41, 199, 198, 0.4);
-        }
-
-        /* Герой секция с видео-фоном */
-        .hero {
-            position: relative;
-            min-height: 80vh;
-            display: flex;
-            align-items: center;
-            overflow: hidden;
-        }
-
-        .hero-video {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            z-index: 0;
-        }
-
-        .hero-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0,0,0,0.4);
-            z-index: 1;
-        }
-
-        .hero-content {
-            position: relative;
-            z-index: 2;
-            color: white;
-            width: 100%;
-        }
-
-        .hero-container {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
-
-        .hero-text {
-            max-width: 600px;
-        }
-
-        .hero-title {
-            font-size: 58px;
-            font-weight: 800;
-            line-height: 1.2;
-            margin-bottom: 20px;
-            color: white;
-        }
-
-        .hero-subtitle {
-            font-size: 18px;
-            margin-bottom: 30px;
-            opacity: 0.9;
-            max-width: 500px;
-        }
-
-        .hero-buttons {
-            display: flex;
-            gap: 20px;
-        }
-
-        .btn-primary, .btn-secondary {
-            padding: 15px 40px;
-            border-radius: 50px;
-            font-size: 16px;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.3s;
-            border: none;
-            text-decoration: none;
-            display: inline-block;
-        }
-
-        .btn-primary {
-            background: #29c7c6;
-            color: white;
-        }
-
-        .btn-primary:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 10px 30px rgba(41, 199, 198, 0.4);
-        }
-
-        .btn-secondary {
-            background: transparent;
-            color: white;
-            border: 2px solid white;
-        }
-
-        .btn-secondary:hover {
-            background: white;
-            color: #1e2a3a;
-        }
-
-        /* Преимущества */
-        .benefits {
-            padding: 80px 0;
-            background: #f8faff;
-        }
-
-        .section-title {
-            font-size: 42px;
-            font-weight: 700;
-            text-align: center;
-            margin-bottom: 20px;
-            color: #1e2a3a;
-        }
-
-        .section-subtitle {
-            text-align: center;
-            color: #6b7a8a;
-            margin-bottom: 60px;
-            font-size: 18px;
-            max-width: 700px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .benefits-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 30px;
-        }
-
-        .benefit-card {
-            background: white;
-            padding: 40px 30px;
-            border-radius: 20px;
-            text-align: center;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-            transition: transform 0.3s;
-        }
-
-        .benefit-card:hover {
-            transform: translateY(-10px);
-        }
-
-        .benefit-icon {
-            width: 80px;
-            height: 80px;
-            margin: 0 auto 25px;
-            background: linear-gradient(135deg, #29c7c620, #1e9a9a20);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 36px;
-            color: #29c7c6;
-        }
-
-        .benefit-title {
-            font-size: 22px;
-            font-weight: 600;
-            margin-bottom: 15px;
-            color: #1e2a3a;
-        }
-
-        .benefit-text {
-            color: #6b7a8a;
-        }
-
-        /* Продукты */
-        .products {
-            padding: 80px 0;
-            background: white;
-        }
-
-        .products-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 25px;
-        }
-
-        .product-card {
-            background: white;
-            border-radius: 20px;
-            overflow: hidden;
-            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
-            transition: all 0.3s;
-            border: 1px solid rgba(0,0,0,0.05);
-        }
-
-        .product-card:hover {
-            transform: translateY(-15px);
-            box-shadow: 0 30px 45px rgba(41, 199, 198, 0.15);
-        }
-
-        .product-image {
-            width: 100%;
-            height: 280px;
-            object-fit: cover;
-            display: block;
-            background: #f5f5f5;
-        }
-
-        .product-info {
-            padding: 25px;
-        }
-
-        .product-title {
-            font-size: 22px;
-            font-weight: 600;
-            margin-bottom: 5px;
-            color: #1e2a3a;
-        }
-
-        .product-subtitle {
-            color: #29c7c6;
-            font-weight: 500;
-            margin-bottom: 15px;
-            font-size: 14px;
-        }
-
-        .product-description {
-            color: #6b7a8a;
-            margin-bottom: 20px;
-            font-size: 14px;
-        }
-
-        .product-price {
-            font-size: 24px;
-            font-weight: 700;
-            color: #1e2a3a;
-            margin-bottom: 20px;
-        }
-
-        .product-btn {
-            width: 100%;
-            background: linear-gradient(135deg, #29c7c6, #1e9a9a);
-            color: white;
-            border: none;
-            padding: 12px;
-            border-radius: 10px;
-            font-weight: 600;
-            cursor: pointer;
-            transition: opacity 0.3s;
-            text-decoration: none;
-            display: inline-block;
-            text-align: center;
-        }
-
-        .product-btn:hover {
-            opacity: 0.9;
-        }
-
-        /* О производстве */
-        .about {
-            padding: 80px 0;
-            background: #f8faff;
-        }
-
-        .about-container {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 60px;
-            align-items: center;
-        }
-
-        .about-title {
-            font-size: 42px;
-            font-weight: 700;
-            margin-bottom: 30px;
-            color: #1e2a3a;
-        }
-
-        .about-title span {
-            color: #29c7c6;
-        }
-
-        .about-text {
-            color: #1e2a3a;
-            margin-bottom: 30px;
-            font-size: 18px;
-            line-height: 1.8;
-        }
-
-        .about-list {
-            list-style: none;
-        }
-
-        .about-list li {
-            margin-bottom: 15px;
-            padding-left: 30px;
-            position: relative;
-            color: #1e2a3a;
-        }
-
-        .about-list li:before {
-            content: "✓";
-            color: #29c7c6;
-            font-weight: bold;
-            position: absolute;
-            left: 0;
-            font-size: 18px;
-        }
-
-        .about-image {
-            width: 100%;
-            border-radius: 20px;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
-            display: block;
-            background: #f5f5f5;
-        }
-
-        /* Как начать */
-        .steps {
-            padding: 80px 0;
-            background: #f8faff;
-        }
-
-        .steps-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 30px;
-        }
-
-        .step-card {
-            text-align: center;
-            padding: 40px 30px;
-            background: white;
-            border-radius: 20px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-        }
-
-        .step-number {
-            width: 70px;
-            height: 70px;
-            background: #29c7c6;
-            color: white;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 32px;
-            font-weight: 700;
-            margin: 0 auto 20px;
-        }
-
-        .step-title {
-            font-size: 24px;
-            font-weight: 600;
-            margin-bottom: 15px;
-            color: #1e2a3a;
-        }
-
-        .step-desc {
-            color: #6b7a8a;
-        }
-
-        /* Отзывы */
-        .testimonials {
-            padding: 80px 0;
-            background: white;
-        }
-
-        .testimonials-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 30px;
-        }
-
-        .testimonial-card {
-            background: #f8faff;
-            padding: 40px;
-            border-radius: 20px;
-        }
-
-        .testimonial-text {
-            font-size: 16px;
-            font-style: italic;
-            margin-bottom: 20px;
-            color: #1e2a3a;
-        }
-
-        .testimonial-author {
-            font-weight: 600;
-            color: #29c7c6;
-        }
-
-        .testimonial-role {
-            color: #6b7a8a;
-            font-size: 14px;
-        }
-
-        /* Научная база */
-        .science {
-            padding: 80px 0;
-            background: white;
-        }
-
-        .science-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 30px;
-        }
-
-        .science-card {
-            background: #f8faff;
-            padding: 30px;
-            border-radius: 20px;
-        }
-
-        .science-title {
-            font-size: 18px;
-            font-weight: 600;
-            margin-bottom: 10px;
-            color: #1e2a3a;
-        }
-
-        .science-meta {
-            color: #6b7a8a;
-            font-size: 14px;
-            margin-bottom: 15px;
-        }
-
-        .science-link {
-            color: #29c7c6;
-            text-decoration: none;
-            font-weight: 500;
-            font-size: 14px;
-        }
-
-        /* Форма */
-        .form-section {
-            padding: 80px 0;
-            background: linear-gradient(135deg, #29c7c6, #1e9a9a);
-            color: white;
-        }
-
-        .form-container {
-            max-width: 600px;
-            margin: 0 auto;
-            text-align: center;
-        }
-
-        .form-title {
-            font-size: 42px;
-            font-weight: 700;
-            margin-bottom: 20px;
-            color: white;
-        }
-
-        .form-subtitle {
-            margin-bottom: 40px;
-            opacity: 0.9;
-            font-size: 18px;
-        }
-
-        .form-group {
-            margin-bottom: 20px;
-        }
-
-        .form-input {
-            width: 100%;
-            padding: 15px 20px;
-            border: none;
-            border-radius: 10px;
-            font-size: 16px;
-            background: white;
-        }
-
-        .form-btn {
-            width: 100%;
-            padding: 15px;
-            background: #1e2a3a;
-            color: white;
-            border: none;
-            border-radius: 10px;
-            font-size: 16px;
-            font-weight: 600;
-            cursor: pointer;
-            transition: transform 0.3s;
-        }
-
-        .form-btn:hover {
-            transform: translateY(-2px);
-            background: #000;
-        }
-
-        /* Футер */
-        .footer {
-            background: #1e2a3a;
-            color: white;
-            padding: 60px 0 30px;
-        }
-
-        .footer-grid {
-            display: grid;
-            grid-template-columns: 2fr 1fr 1fr 1fr;
-            gap: 40px;
-            margin-bottom: 40px;
-        }
-
-        .footer-logo {
-            font-size: 28px;
-            font-weight: 700;
-            color: #29c7c6;
-            margin-bottom: 20px;
-        }
-
-        .footer-logo span {
-            font-size: 14px;
-            color: rgba(255,255,255,0.6);
-            display: block;
-        }
-
-        .footer-links {
-            list-style: none;
-        }
-
-        .footer-links li {
-            margin-bottom: 10px;
-        }
-
-        .footer-links a {
-            color: rgba(255,255,255,0.6);
-            text-decoration: none;
-            transition: color 0.3s;
-        }
-
-        .footer-links a:hover {
-            color: #29c7c6;
-        }
-
-        .social-links {
-            display: flex;
-            gap: 15px;
-            margin-top: 20px;
-        }
-
-        .social-links a {
-            color: rgba(255,255,255,0.6);
-            text-decoration: none;
-            font-size: 20px;
-            transition: color 0.3s;
-        }
-
-        .social-links a:hover {
-            color: #29c7c6;
-        }
-
-        .footer-bottom {
-            text-align: center;
-            padding-top: 30px;
-            border-top: 1px solid rgba(255,255,255,0.1);
-            color: rgba(255,255,255,0.4);
-            font-size: 14px;
-        }
-
-        /* Адаптивность */
-        @media (max-width: 1200px) {
-            .products-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-        }
-
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Montserrat', sans-serif; line-height: 1.6; color: #1e2a3a; background: #ffffff; overflow-x: hidden; }
+        .container { max-width: 1400px; margin: 0 auto; padding: 0 40px; }
+        .navbar { padding: 20px 0; background: rgba(255,255,255,0.98); border-bottom: 1px solid rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 100; backdrop-filter: blur(10px); }
+        .nav-container { display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 28px; font-weight: 800; color: #29c7c6; letter-spacing: -0.5px; }
+        .logo span { font-size: 14px; font-weight: 400; color: #6b7a8a; display: block; }
+        .nav-menu { display: flex; gap: 40px; list-style: none; }
+        .nav-menu a { text-decoration: none; color: #1e2a3a; font-weight: 500; font-size: 16px; transition: color 0.3s; position: relative; }
+        .nav-menu a:hover { color: #29c7c6; }
+        .nav-menu a:after { content: ''; position: absolute; bottom: -5px; left: 0; width: 0; height: 2px; background: #29c7c6; transition: width 0.3s; }
+        .nav-menu a:hover:after { width: 100%; }
+        .cart-btn { background: linear-gradient(135deg, #29c7c6, #1e9a9a); color: white; border: none; padding: 12px 30px; border-radius: 50px; cursor: pointer; font-weight: 600; font-size: 15px; transition: transform 0.3s, box-shadow 0.3s; box-shadow: 0 4px 15px rgba(41, 199, 198, 0.3); text-decoration: none; display: inline-block; }
+        .cart-btn:hover { transform: translateY(-2px); box-shadow: 0 8px 25px rgba(41, 199, 198, 0.4); }
+        .hero { position: relative; min-height: 80vh; display: flex; align-items: center; overflow: hidden; }
+        .hero-video { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: 0; }
+        .hero-overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.4); z-index: 1; }
+        .hero-content { position: relative; z-index: 2; color: white; width: 100%; }
+        .hero-container { display: flex; align-items: center; justify-content: space-between; }
+        .hero-text { max-width: 600px; }
+        .hero-title { font-size: 58px; font-weight: 800; line-height: 1.2; margin-bottom: 20px; color: white; }
+        .hero-subtitle { font-size: 18px; margin-bottom: 30px; opacity: 0.9; max-width: 500px; }
+        .hero-buttons { display: flex; gap: 20px; }
+        .btn-primary, .btn-secondary { padding: 15px 40px; border-radius: 50px; font-size: 16px; font-weight: 600; cursor: pointer; transition: all 0.3s; border: none; text-decoration: none; display: inline-block; }
+        .btn-primary { background: #29c7c6; color: white; }
+        .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 10px 30px rgba(41, 199, 198, 0.4); }
+        .btn-secondary { background: transparent; color: white; border: 2px solid white; }
+        .btn-secondary:hover { background: white; color: #1e2a3a; }
+        .benefits { padding: 80px 0; background: #f8faff; }
+        .section-title { font-size: 42px; font-weight: 700; text-align: center; margin-bottom: 20px; color: #1e2a3a; }
+        .section-subtitle { text-align: center; color: #6b7a8a; margin-bottom: 60px; font-size: 18px; max-width: 700px; margin-left: auto; margin-right: auto; }
+        .benefits-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; }
+        .benefit-card { background: white; padding: 40px 30px; border-radius: 20px; text-align: center; box-shadow: 0 10px 30px rgba(0,0,0,0.05); transition: transform 0.3s; }
+        .benefit-card:hover { transform: translateY(-10px); }
+        .benefit-icon { width: 80px; height: 80px; margin: 0 auto 25px; background: linear-gradient(135deg, #29c7c620, #1e9a9a20); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 36px; color: #29c7c6; }
+        .benefit-title { font-size: 22px; font-weight: 600; margin-bottom: 15px; color: #1e2a3a; }
+        .benefit-text { color: #6b7a8a; }
+        .products { padding: 80px 0; background: white; }
+        .products-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 25px; }
+        .product-card { background: white; border-radius: 20px; overflow: hidden; box-shadow: 0 15px 35px rgba(0,0,0,0.1); transition: all 0.3s; border: 1px solid rgba(0,0,0,0.05); }
+        .product-card:hover { transform: translateY(-15px); box-shadow: 0 30px 45px rgba(41, 199, 198, 0.15); }
+        .product-image { width: 100%; height: 280px; object-fit: cover; display: block; background: #f5f5f5; }
+        .product-info { padding: 25px; }
+        .product-title { font-size: 22px; font-weight: 600; margin-bottom: 5px; color: #1e2a3a; }
+        .product-subtitle { color: #29c7c6; font-weight: 500; margin-bottom: 15px; font-size: 14px; }
+        .product-description { color: #6b7a8a; margin-bottom: 20px; font-size: 14px; }
+        .product-price { font-size: 24px; font-weight: 700; color: #1e2a3a; margin-bottom: 20px; }
+        .product-btn { width: 100%; background: linear-gradient(135deg, #29c7c6, #1e9a9a); color: white; border: none; padding: 12px; border-radius: 10px; font-weight: 600; cursor: pointer; transition: opacity 0.3s; text-decoration: none; display: inline-block; text-align: center; }
+        .product-btn:hover { opacity: 0.9; }
+        .about { padding: 80px 0; background: #f8faff; }
+        .about-container { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+        .about-title { font-size: 42px; font-weight: 700; margin-bottom: 30px; color: #1e2a3a; }
+        .about-title span { color: #29c7c6; }
+        .about-text { color: #1e2a3a; margin-bottom: 30px; font-size: 18px; line-height: 1.8; }
+        .about-list { list-style: none; }
+        .about-list li { margin-bottom: 15px; padding-left: 30px; position: relative; color: #1e2a3a; }
+        .about-list li:before { content: "✓"; color: #29c7c6; font-weight: bold; position: absolute; left: 0; font-size: 18px; }
+        .about-image { width: 100%; border-radius: 20px; box-shadow: 0 20px 40px rgba(0,0,0,0.1); display: block; background: #f5f5f5; }
+        .steps { padding: 80px 0; background: #f8faff; }
+        .steps-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; }
+        .step-card { text-align: center; padding: 40px 30px; background: white; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
+        .step-number { width: 70px; height: 70px; background: #29c7c6; color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 32px; font-weight: 700; margin: 0 auto 20px; }
+        .step-title { font-size: 24px; font-weight: 600; margin-bottom: 15px; color: #1e2a3a; }
+        .step-desc { color: #6b7a8a; }
+        .testimonials { padding: 80px 0; background: white; }
+        .testimonials-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 30px; }
+        .testimonial-card { background: #f8faff; padding: 40px; border-radius: 20px; }
+        .testimonial-text { font-size: 16px; font-style: italic; margin-bottom: 20px; color: #1e2a3a; }
+        .testimonial-author { font-weight: 600; color: #29c7c6; }
+        .testimonial-role { color: #6b7a8a; font-size: 14px; }
+        .science { padding: 80px 0; background: white; }
+        .science-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; }
+        .science-card { background: #f8faff; padding: 30px; border-radius: 20px; }
+        .science-title { font-size: 18px; font-weight: 600; margin-bottom: 10px; color: #1e2a3a; }
+        .science-meta { color: #6b7a8a; font-size: 14px; margin-bottom: 15px; }
+        .science-link { color: #29c7c6; text-decoration: none; font-weight: 500; font-size: 14px; }
+        .form-section { padding: 80px 0; background: linear-gradient(135deg, #29c7c6, #1e9a9a); color: white; }
+        .form-container { max-width: 600px; margin: 0 auto; text-align: center; }
+        .form-title { font-size: 42px; font-weight: 700; margin-bottom: 20px; color: white; }
+        .form-subtitle { margin-bottom: 40px; opacity: 0.9; font-size: 18px; }
+        .form-group { margin-bottom: 20px; }
+        .form-input { width: 100%; padding: 15px 20px; border: none; border-radius: 10px; font-size: 16px; background: white; }
+        .form-btn { width: 100%; padding: 15px; background: #1e2a3a; color: white; border: none; border-radius: 10px; font-size: 16px; font-weight: 600; cursor: pointer; transition: transform 0.3s; }
+        .form-btn:hover { transform: translateY(-2px); background: #000; }
+        .footer { background: #1e2a3a; color: white; padding: 60px 0 30px; }
+        .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 40px; margin-bottom: 40px; }
+        .footer-logo { font-size: 28px; font-weight: 700; color: #29c7c6; margin-bottom: 20px; }
+        .footer-logo span { font-size: 14px; color: rgba(255,255,255,0.6); display: block; }
+        .footer-links { list-style: none; }
+        .footer-links li { margin-bottom: 10px; }
+        .footer-links a { color: rgba(255,255,255,0.6); text-decoration: none; transition: color 0.3s; }
+        .footer-links a:hover { color: #29c7c6; }
+        .social-links { display: flex; gap: 15px; margin-top: 20px; }
+        .social-links a { color: rgba(255,255,255,0.6); text-decoration: none; font-size: 20px; transition: color 0.3s; }
+        .social-links a:hover { color: #29c7c6; }
+        .footer-bottom { text-align: center; padding-top: 30px; border-top: 1px solid rgba(255,255,255,0.1); color: rgba(255,255,255,0.4); font-size: 14px; }
+        @media (max-width: 1200px) { .products-grid { grid-template-columns: repeat(2, 1fr); } }
         @media (max-width: 768px) {
-            .nav-menu {
-                display: none;
-            }
-            .hero-container {
-                flex-direction: column;
-                text-align: center;
-            }
-            .hero-title {
-                font-size: 42px;
-            }
-            .hero-buttons {
-                justify-content: center;
-            }
-            .benefits-grid,
-            .products-grid,
-            .about-container,
-            .testimonials-grid,
-            .steps-grid,
-            .science-grid,
-            .footer-grid {
-                grid-template-columns: 1fr;
-            }
-            .container {
-                padding: 0 20px;
-            }
+            .nav-menu { display: none; }
+            .hero-container { flex-direction: column; text-align: center; }
+            .hero-title { font-size: 42px; }
+            .hero-buttons { justify-content: center; }
+            .benefits-grid, .products-grid, .about-container, .testimonials-grid, .steps-grid, .science-grid, .footer-grid { grid-template-columns: 1fr; }
+            .container { padding: 0 20px; }
         }
-
-        /* Ленивая загрузка */
-        img {
-            loading: lazy;
-        }
+        img { loading: lazy; }
     </style>
 </head>
 <body>
-    <!-- Навигация -->
     <nav class="navbar">
         <div class="container nav-container">
             <div class="logo">
@@ -725,7 +145,6 @@
         </div>
     </nav>
 
-    <!-- Герой секция с видео-фоном -->
     <section class="hero">
         <video class="hero-video" autoplay muted loop playsinline>
             <source src="https://mycofarm.ru/upload/iblock/cdd/0iil07cbjv2jaawm3ahe2be4pcekw7kn.mp4" type="video/mp4">
@@ -746,89 +165,32 @@
         </div>
     </section>
 
-    <!-- Преимущества -->
     <section class="benefits">
         <div class="container">
             <h2 class="section-title">Почему выбирают нас</h2>
             <p class="section-subtitle">Мы выращиваем сами — от грибницы до готового продукта</p>
             <div class="benefits-grid">
-                <div class="benefit-card">
-                    <div class="benefit-icon">🌿</div>
-                    <h3 class="benefit-title">100% натурально</h3>
-                    <p class="benefit-text">Без ГМО, без пестицидов, без химии. Только чистая сила природы.</p>
-                </div>
-                <div class="benefit-card">
-                    <div class="benefit-icon">🔬</div>
-                    <h3 class="benefit-title">Лабораторный контроль</h3>
-                    <p class="benefit-text">Каждая партия проходит тестирование. Мы гарантируем чистоту и эффективность.</p>
-                </div>
-                <div class="benefit-card">
-                    <div class="benefit-icon">🇷🇺</div>
-                    <h3 class="benefit-title">Своя ферма</h3>
-                    <p class="benefit-text">Собственное производство в Санкт-Петербурге. Полный цикл выращивания.</p>
-                </div>
+                <div class="benefit-card"><div class="benefit-icon">🌿</div><h3 class="benefit-title">100% натурально</h3><p class="benefit-text">Без ГМО, без пестицидов, без химии. Только чистая сила природы.</p></div>
+                <div class="benefit-card"><div class="benefit-icon">🔬</div><h3 class="benefit-title">Лабораторный контроль</h3><p class="benefit-text">Каждая партия проходит тестирование. Мы гарантируем чистоту и эффективность.</p></div>
+                <div class="benefit-card"><div class="benefit-icon">🇷🇺</div><h3 class="benefit-title">Своя ферма</h3><p class="benefit-text">Собственное производство в Санкт-Петербурге. Полный цикл выращивания.</p></div>
             </div>
         </div>
     </section>
 
-    <!-- Продукты (краткий обзор) -->
     <section id="products" class="products">
         <div class="container">
             <h2 class="section-title">Наши продукты</h2>
             <p class="section-subtitle">Выберите то, что нужно именно вашему мозгу</p>
             <div class="products-grid">
-                <!-- Ежовик -->
-                <div class="product-card">
-                    <img src="https://raw.githubusercontent.com/Dron939-sketch/neirobiotix/main/images/Ежовик.png" alt="Ежовик гребенчатый" class="product-image" loading="lazy">
-                    <div class="product-info">
-                        <h3 class="product-title">Ежовик гребенчатый</h3>
-                        <div class="product-subtitle">Lion's Mane</div>
-                        <p class="product-description">Для ясности ума, памяти и против "тумана" в голове.</p>
-                        <div class="product-price">1 990 ₽</div>
-                        <a href="product.html?id=ezhovik" class="product-btn">Подробнее</a>
-                    </div>
-                </div>
-                <!-- Кордицепс -->
-                <div class="product-card">
-                    <img src="https://raw.githubusercontent.com/Dron939-sketch/neirobiotix/main/images/Кордицепс.png" alt="Кордицепс" class="product-image" loading="lazy">
-                    <div class="product-info">
-                        <h3 class="product-title">Кордицепс</h3>
-                        <div class="product-subtitle">Cordyceps militaris</div>
-                        <p class="product-description">Для энергии и выносливости. Природный адаптоген.</p>
-                        <div class="product-price">2 190 ₽</div>
-                        <a href="product.html?id=kordiceps" class="product-btn">Подробнее</a>
-                    </div>
-                </div>
-                <!-- Рейши -->
-                <div class="product-card">
-                    <img src="https://raw.githubusercontent.com/Dron939-sketch/neirobiotix/main/images/Рейши.png" alt="Рейши" class="product-image" loading="lazy">
-                    <div class="product-info">
-                        <h3 class="product-title">Рейши</h3>
-                        <div class="product-subtitle">Ganoderma lucidum</div>
-                        <p class="product-description">Для спокойствия и качественного сна.</p>
-                        <div class="product-price">2 090 ₽</div>
-                        <a href="product.html?id=reyshi" class="product-btn">Подробнее</a>
-                    </div>
-                </div>
-                <!-- Траметес -->
-                <div class="product-card">
-                    <img src="https://raw.githubusercontent.com/Dron939-sketch/neirobiotix/main/images/Траметес.png" alt="Траметес" class="product-image" loading="lazy">
-                    <div class="product-info">
-                        <h3 class="product-title">Траметес</h3>
-                        <div class="product-subtitle">Trametes versicolor</div>
-                        <p class="product-description">Для иммунитета и поддержки микробиоты.</p>
-                        <div class="product-price">2 090 ₽</div>
-                        <a href="product.html?id=trametes" class="product-btn">Подробнее</a>
-                    </div>
-                </div>
+                <div class="product-card"><img src="https://raw.githubusercontent.com/Dron939-sketch/neirobiotix/main/images/Ежовик.png" alt="Ежовик гребенчатый" class="product-image" loading="lazy"><div class="product-info"><h3 class="product-title">Ежовик гребенчатый</h3><div class="product-subtitle">Lion's Mane</div><p class="product-description">Для ясности ума, памяти и против "тумана" в голове.</p><div class="product-price">1 990 ₽</div><a href="product.html?id=ezhovik" class="product-btn">Подробнее</a></div></div>
+                <div class="product-card"><img src="https://raw.githubusercontent.com/Dron939-sketch/neirobiotix/main/images/Кордицепс.png" alt="Кордицепс" class="product-image" loading="lazy"><div class="product-info"><h3 class="product-title">Кордицепс</h3><div class="product-subtitle">Cordyceps militaris</div><p class="product-description">Для энергии и выносливости. Природный адаптоген.</p><div class="product-price">2 190 ₽</div><a href="product.html?id=kordiceps" class="product-btn">Подробнее</a></div></div>
+                <div class="product-card"><img src="https://raw.githubusercontent.com/Dron939-sketch/neirobiotix/main/images/Рейши.png" alt="Рейши" class="product-image" loading="lazy"><div class="product-info"><h3 class="product-title">Рейши</h3><div class="product-subtitle">Ganoderma lucidum</div><p class="product-description">Для спокойствия и качественного сна.</p><div class="product-price">2 090 ₽</div><a href="product.html?id=reyshi" class="product-btn">Подробнее</a></div></div>
+                <div class="product-card"><img src="https://raw.githubusercontent.com/Dron939-sketch/neirobiotix/main/images/Траметес.png" alt="Траметес" class="product-image" loading="lazy"><div class="product-info"><h3 class="product-title">Траметес</h3><div class="product-subtitle">Trametes versicolor</div><p class="product-description">Для иммунитета и поддержки микробиоты.</p><div class="product-price">2 090 ₽</div><a href="product.html?id=trametes" class="product-btn">Подробнее</a></div></div>
             </div>
-            <div style="text-align: center; margin-top: 40px;">
-                <a href="catalog.html" class="btn-primary" style="padding: 15px 50px;">Смотреть весь каталог</a>
-            </div>
+            <div style="text-align: center; margin-top: 40px;"><a href="catalog.html" class="btn-primary" style="padding: 15px 50px;">Смотреть весь каталог</a></div>
         </div>
     </section>
 
-    <!-- О производстве (Мы — производитель) с композицией -->
     <section id="about" class="about">
         <div class="container about-container">
             <div>
@@ -843,115 +205,64 @@
                 <a href="contacts.html" class="btn-primary" style="margin-top: 30px; display: inline-block;">Связаться с нами</a>
             </div>
             <div>
-                <!-- КОМПОЗИЦИЯ -->
                 <img src="https://raw.githubusercontent.com/Dron939-sketch/neirobiotix/main/images/Композиция.png" alt="Композиция продуктов" class="about-image" loading="lazy">
             </div>
         </div>
     </section>
 
-    <!-- Как начать -->
     <section class="steps">
         <div class="container">
             <h2 class="section-title">Как получить продукт</h2>
             <p class="section-subtitle">Всё просто и прозрачно</p>
             <div class="steps-grid">
-                <div class="step-card">
-                    <div class="step-number">1</div>
-                    <h3 class="step-title">Выберите продукт</h3>
-                    <p class="step-desc">Ежовик, кордицепс, рейши или траметес</p>
-                </div>
-                <div class="step-card">
-                    <div class="step-number">2</div>
-                    <h3 class="step-title">Оформите заказ</h3>
-                    <p class="step-desc">Добавьте в корзину и заполните данные для доставки</p>
-                </div>
-                <div class="step-card">
-                    <div class="step-number">3</div>
-                    <h3 class="step-title">Получите и пользуйтесь</h3>
-                    <p class="step-desc">Доставка по всей России. Начинайте заботу о мозге</p>
-                </div>
+                <div class="step-card"><div class="step-number">1</div><h3 class="step-title">Выберите продукт</h3><p class="step-desc">Ежовик, кордицепс, рейши или траметес</p></div>
+                <div class="step-card"><div class="step-number">2</div><h3 class="step-title">Оформите заказ</h3><p class="step-desc">Добавьте в корзину и заполните данные для доставки</p></div>
+                <div class="step-card"><div class="step-number">3</div><h3 class="step-title">Получите и пользуйтесь</h3><p class="step-desc">Доставка по всей России. Начинайте заботу о мозге</p></div>
             </div>
         </div>
     </section>
 
-    <!-- Отзывы -->
     <section class="testimonials">
         <div class="container">
             <h2 class="section-title">Реальные истории</h2>
             <div class="testimonials-grid">
-                <div class="testimonial-card">
-                    <p class="testimonial-text">«После 2 недель приема ежовика перестала зависать над задачами. Мысли стали четче, как будто туман рассеялся».</p>
-                    <div class="testimonial-author">Анна, 34 года</div>
-                    <div class="testimonial-role">IT-менеджер</div>
-                </div>
-                <div class="testimonial-card">
-                    <p class="testimonial-text">«Кордицепс реально дает энергии. Тренировки не валюсь, и голова ясная даже после работы».</p>
-                    <div class="testimonial-author">Михаил, 28 лет</div>
-                    <div class="testimonial-role">Спортсмен</div>
-                </div>
+                <div class="testimonial-card"><p class="testimonial-text">«После 2 недель приема ежовика перестала зависать над задачами. Мысли стали четче, как будто туман рассеялся».</p><div class="testimonial-author">Анна, 34 года</div><div class="testimonial-role">IT-менеджер</div></div>
+                <div class="testimonial-card"><p class="testimonial-text">«Кордицепс реально дает энергии. Тренировки не валюсь, и голова ясная даже после работы».</p><div class="testimonial-author">Михаил, 28 лет</div><div class="testimonial-role">Спортсмен</div></div>
             </div>
         </div>
     </section>
 
-    <!-- Научная база -->
     <section id="science" class="science">
         <div class="container">
             <h2 class="section-title">Опираемся на исследования</h2>
             <div class="science-grid">
-                <div class="science-card">
-                    <h3 class="science-title">Hericium erinaceus и когнитивные функции</h3>
-                    <div class="science-meta">PubMed, 2023</div>
-                    <a href="#" class="science-link">Читать исследование →</a>
-                </div>
-                <div class="science-card">
-                    <h3 class="science-title">Cordyceps militaris и выносливость</h3>
-                    <div class="science-meta">Мета-анализ, 2022</div>
-                    <a href="#" class="science-link">Читать исследование →</a>
-                </div>
-                <div class="science-card">
-                    <h3 class="science-title">Ganoderma lucidum и нервная система</h3>
-                    <div class="science-meta">Обзор, 2024</div>
-                    <a href="#" class="science-link">Читать исследование →</a>
-                </div>
+                <div class="science-card"><h3 class="science-title">Hericium erinaceus и когнитивные функции</h3><div class="science-meta">PubMed, 2023</div><a href="#" class="science-link">Читать исследование →</a></div>
+                <div class="science-card"><h3 class="science-title">Cordyceps militaris и выносливость</h3><div class="science-meta">Мета-анализ, 2022</div><a href="#" class="science-link">Читать исследование →</a></div>
+                <div class="science-card"><h3 class="science-title">Ganoderma lucidum и нервная система</h3><div class="science-meta">Обзор, 2024</div><a href="#" class="science-link">Читать исследование →</a></div>
             </div>
         </div>
     </section>
 
-    <!-- Форма обратной связи -->
     <section class="form-section">
         <div class="container form-container">
             <h2 class="form-title">Остались вопросы?</h2>
             <p class="form-subtitle">Напишите нам, и мы поможем подобрать продукт</p>
             <form action="cart.html" method="GET">
-                <div class="form-group">
-                    <input type="text" class="form-input" placeholder="Ваше имя" required>
-                </div>
-                <div class="form-group">
-                    <input type="tel" class="form-input" placeholder="Телефон" required>
-                </div>
-                <div class="form-group">
-                    <input type="email" class="form-input" placeholder="Email">
-                </div>
+                <div class="form-group"><input type="text" class="form-input" placeholder="Ваше имя" required></div>
+                <div class="form-group"><input type="tel" class="form-input" placeholder="Телефон" required></div>
+                <div class="form-group"><input type="email" class="form-input" placeholder="Email"></div>
                 <button type="submit" class="form-btn">Отправить</button>
             </form>
         </div>
     </section>
 
-    <!-- Футер -->
     <footer id="contacts" class="footer">
         <div class="container">
             <div class="footer-grid">
                 <div>
-                    <div class="footer-logo">
-                        <a href="index.html" style="text-decoration: none; color: inherit;">Нейробиотикс</a>
-                        <span>натуральные усилители когнитивных функций</span>
-                    </div>
+                    <div class="footer-logo"><a href="index.html" style="text-decoration: none; color: inherit;">Нейробиотикс</a><span>натуральные усилители когнитивных функций</span></div>
                     <p style="color: rgba(255,255,255,0.6); margin-bottom: 20px;">Собственное производство в Санкт-Петербурге. Продажа напрямую от производителя.</p>
-                    <div class="social-links">
-                        <a href="https://vk.com/mycofarmru" target="_blank">📘</a>
-                        <a href="https://t.me/+-7uVhBYrSvYzODFi" target="_blank">✈️</a>
-                        <a href="https://www.youtube.com/@mycofarmru" target="_blank">📺</a>
-                    </div>
+                    <div class="social-links"><a href="https://vk.com/mycofarmru" target="_blank">📘</a><a href="https://t.me/+-7uVhBYrSvYzODFi" target="_blank">✈️</a><a href="https://www.youtube.com/@mycofarmru" target="_blank">📺</a></div>
                 </div>
                 <div>
                     <h4 style="color: white; margin-bottom: 20px;">Каталог</h4>
