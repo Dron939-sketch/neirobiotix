@@ -5,13 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Каталог продукции — Нейробиотикс</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript">
+        (function(m,e,t,r,i,k,a){
+            m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+            m[i].l=1*new Date();
+            for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+            k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+        })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=109013602', 'ym');
+
+        ym(109013602, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
+    </script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/109013602" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <!-- /Yandex.Metrika counter -->
     <style>
-        /* Базовые стили */
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: 'Montserrat', sans-serif; line-height: 1.6; color: #1e2a3a; background: #ffffff; }
         .container { max-width: 1400px; margin: 0 auto; padding: 0 40px; }
-        
-        /* Навигация */
         .navbar { padding: 20px 0; background: rgba(255,255,255,0.98); border-bottom: 1px solid rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 100; backdrop-filter: blur(10px); }
         .nav-container { display: flex; justify-content: space-between; align-items: center; }
         .logo { font-size: 28px; font-weight: 800; color: #29c7c6; letter-spacing: -0.5px; }
@@ -23,26 +33,17 @@
         .nav-menu a:hover:after { width: 100%; }
         .cart-btn { background: linear-gradient(135deg, #29c7c6, #1e9a9a); color: white; border: none; padding: 12px 30px; border-radius: 50px; cursor: pointer; font-weight: 600; font-size: 15px; transition: transform 0.3s, box-shadow 0.3s; box-shadow: 0 4px 15px rgba(41, 199, 198, 0.3); text-decoration: none; display: inline-block; }
         .cart-btn:hover { transform: translateY(-2px); box-shadow: 0 8px 25px rgba(41, 199, 198, 0.4); }
-
-        /* Хлебные крошки */
         .breadcrumbs { padding: 20px 0; background: #f8faff; margin-bottom: 40px; }
         .breadcrumbs-list { display: flex; gap: 10px; list-style: none; color: #6b7a8a; }
         .breadcrumbs-list a { color: #6b7a8a; text-decoration: none; }
         .breadcrumbs-list a:hover { color: #29c7c6; }
-
-        /* Заголовок страницы */
         .page-title { font-size: 48px; font-weight: 700; margin-bottom: 20px; color: #1e2a3a; }
         .page-subtitle { color: #6b7a8a; margin-bottom: 40px; font-size: 18px; }
-
-        /* Фильтры и сортировка */
         .catalog-toolbar { display: flex; justify-content: space-between; align-items: center; margin-bottom: 30px; flex-wrap: wrap; gap: 20px; }
         .filters { display: flex; gap: 15px; flex-wrap: wrap; }
         .filter-select { padding: 12px 25px; border: 1px solid #e0e0e0; border-radius: 10px; font-family: 'Montserrat', sans-serif; background: white; cursor: pointer; }
         .sort-select { padding: 12px 25px; border: 1px solid #e0e0e0; border-radius: 10px; font-family: 'Montserrat', sans-serif; background: white; cursor: pointer; }
-
-        /* Сетка каталога */
         .catalog-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; margin-bottom: 60px; }
-        
         .product-card { background: white; border-radius: 20px; overflow: hidden; box-shadow: 0 15px 35px rgba(0,0,0,0.1); transition: all 0.3s; border: 1px solid rgba(0,0,0,0.05); }
         .product-card:hover { transform: translateY(-15px); box-shadow: 0 30px 45px rgba(41, 199, 198, 0.15); }
         .product-image { width: 100%; height: 280px; object-fit: cover; }
@@ -54,19 +55,13 @@
         .product-price small { font-size: 16px; font-weight: 400; color: #6b7a8a; }
         .product-btn { width: 100%; background: linear-gradient(135deg, #29c7c6, #1e9a9a); color: white; border: none; padding: 14px; border-radius: 10px; font-weight: 600; cursor: pointer; transition: opacity 0.3s; text-decoration: none; display: inline-block; text-align: center; }
         .product-btn:hover { opacity: 0.9; }
-
-        /* Пагинация */
         .pagination { display: flex; justify-content: center; gap: 10px; margin: 60px 0; }
         .pagination a { padding: 12px 20px; border: 1px solid #e0e0e0; border-radius: 10px; text-decoration: none; color: #1e2a3a; transition: all 0.3s; }
         .pagination a:hover, .pagination a.active { background: #29c7c6; color: white; border-color: #29c7c6; }
-
-        /* Категории */
         .categories { margin-bottom: 40px; }
         .categories-grid { display: flex; gap: 15px; flex-wrap: wrap; }
         .category-tag { padding: 12px 30px; background: #f8faff; border-radius: 30px; cursor: pointer; transition: all 0.3s; border: 1px solid transparent; text-decoration: none; color: #1e2a3a; display: inline-block; }
         .category-tag:hover, .category-tag.active { background: #29c7c6; color: white; border-color: #29c7c6; }
-
-        /* Футер */
         .footer { background: #1e2a3a; color: white; padding: 60px 0 30px; margin-top: 80px; }
         .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 40px; margin-bottom: 40px; }
         .footer-logo { font-size: 28px; font-weight: 700; color: #29c7c6; margin-bottom: 20px; }
@@ -76,11 +71,7 @@
         .footer-links a { color: rgba(255,255,255,0.6); text-decoration: none; transition: color 0.3s; }
         .footer-links a:hover { color: #29c7c6; }
         .footer-bottom { text-align: center; padding-top: 30px; border-top: 1px solid rgba(255,255,255,0.1); color: rgba(255,255,255,0.4); font-size: 14px; }
-
-        /* Адаптивность */
-        @media (max-width: 1200px) {
-            .catalog-grid { grid-template-columns: repeat(2, 1fr); }
-        }
+        @media (max-width: 1200px) { .catalog-grid { grid-template-columns: repeat(2, 1fr); } }
         @media (max-width: 768px) {
             .catalog-grid { grid-template-columns: 1fr; }
             .nav-menu { display: none; }
@@ -91,7 +82,6 @@
     </style>
 </head>
 <body>
-    <!-- Навигация -->
     <nav class="navbar">
         <div class="container nav-container">
             <div class="logo">
@@ -108,7 +98,6 @@
         </div>
     </nav>
 
-    <!-- Хлебные крошки -->
     <div class="breadcrumbs">
         <div class="container">
             <ul class="breadcrumbs-list">
@@ -122,7 +111,6 @@
         <h1 class="page-title">Каталог продукции</h1>
         <p class="page-subtitle">Грибные адаптогены напрямую от производителя</p>
 
-        <!-- Категории -->
         <div class="categories">
             <div class="categories-grid">
                 <a href="#" class="category-tag active">Все продукты</a>
@@ -134,7 +122,6 @@
             </div>
         </div>
 
-        <!-- Инструменты -->
         <div class="catalog-toolbar">
             <div class="filters">
                 <select class="filter-select">
@@ -159,9 +146,7 @@
             </select>
         </div>
 
-        <!-- Сетка товаров -->
         <div class="catalog-grid">
-            <!-- Ежовик -->
             <div class="product-card">
                 <img src="https://i.postimg.cc/BZkJMh84/ezhovik-1.jpg" alt="Ежовик гребенчатый" class="product-image">
                 <div class="product-info">
@@ -172,7 +157,6 @@
                     <a href="product.html?id=ezhovik" class="product-btn">Подробнее</a>
                 </div>
             </div>
-            <!-- Кордицепс -->
             <div class="product-card">
                 <img src="https://i.postimg.cc/C1WLBJkx/kordiceps-2.jpg" alt="Кордицепс" class="product-image">
                 <div class="product-info">
@@ -183,7 +167,6 @@
                     <a href="product.html?id=kordiceps" class="product-btn">Подробнее</a>
                 </div>
             </div>
-            <!-- Рейши -->
             <div class="product-card">
                 <img src="https://i.postimg.cc/Hs0snwL6/reishi-1.jpg" alt="Рейши" class="product-image">
                 <div class="product-info">
@@ -194,7 +177,6 @@
                     <a href="product.html?id=reyshi" class="product-btn">Подробнее</a>
                 </div>
             </div>
-            <!-- Траметес -->
             <div class="product-card">
                 <img src="https://i.postimg.cc/YS0pdTxj/trametes-1.jpg" alt="Траметес" class="product-image">
                 <div class="product-info">
@@ -205,7 +187,6 @@
                     <a href="product.html?id=trametes" class="product-btn">Подробнее</a>
                 </div>
             </div>
-            <!-- Ежовик экстракт -->
             <div class="product-card">
                 <img src="https://i.postimg.cc/BZkJMh84/ezhovik-1.jpg" alt="Ежовик экстракт" class="product-image">
                 <div class="product-info">
@@ -216,7 +197,6 @@
                     <a href="product.html?id=ezhovik-extract" class="product-btn">Подробнее</a>
                 </div>
             </div>
-            <!-- Набор "Мозг" -->
             <div class="product-card">
                 <img src="https://i.postimg.cc/BZkJMh84/ezhovik-1.jpg" alt="Набор для мозга" class="product-image">
                 <div class="product-info">
@@ -229,7 +209,6 @@
             </div>
         </div>
 
-        <!-- Пагинация -->
         <div class="pagination">
             <a href="#" class="active">1</a>
             <a href="#">2</a>
@@ -239,7 +218,6 @@
         </div>
     </div>
 
-    <!-- Футер -->
     <footer class="footer">
         <div class="container">
             <div class="footer-grid">
